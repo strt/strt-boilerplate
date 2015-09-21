@@ -1,0 +1,33 @@
+{
+  "name": "Strateg",
+  "version": "1.0.2",
+  "private": true,
+  "description": "Strateg development packages",
+  "author": "Strateg Marknadsföring AB",
+  "license": "MIT",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "browserify": "11.0.1",
+    "browserify-shim": "^3.8.10",
+    "strt-gulpfile": "https://github.com/strt/gulpfile.git"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "browser": {
+    "jQuery": "./public/dist/lib/jquery/dist/jquery.min.js",
+    "modernizr": "./public/dist/lib/modernizr/modernizr.js",
+    "velocity": "./public/dist/lib/velocity/velocity.min.js"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jQuery": "jQuery",
+    "modernizr": "modernizr",
+    "velocity": "velocity"
+  }
+}

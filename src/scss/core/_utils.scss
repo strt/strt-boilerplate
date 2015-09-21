@@ -1,0 +1,145 @@
+// Text helpers
+.u-text {
+  &.-left {
+    text-align: left;
+  }
+  &.-center {
+    text-align: center;
+  }
+  &.-right {
+    text-align: right;
+  }
+  &.-italic {
+    font-style: italic; 
+  }
+  &.-no-wrap {
+    white-space: nowrap;
+  }
+  &.-hide {
+    text-indent: -9999px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+// CSS reset helpers
+.u-reset {
+  &__button {
+    display: inline-block;
+    vertical-align: top;
+    appearance: none;
+    outline: none;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  &__input {
+    appearance: none;
+    border: none;
+    background: transparent;
+    border-radius: 0;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  &__transition {
+    transition: none !important;
+  }
+}
+
+// Clearfix
+.u-clearfix {
+  @include clearfix();
+  display: block;
+}
+
+// Vertical align helpers
+.u-valign {
+  &__helper {
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+  }
+  &.-middle {
+    vertical-align: middle !important;
+  }
+  &.-top {
+    vertical-align: top !important;
+  }
+  &.-bottom {
+    vertical-align: bottom !important;
+  }
+  &.-baseline {
+    vertical-align: baseline !important;
+  }
+}
+
+// Aspect ratio helpers
+.u-ratio {
+  &__16-9 {
+    position: relative;
+    display: block;
+    padding-bottom: 56.25%;
+  }
+}
+
+// Position
+.u-position {
+  &.-relative {
+    position: relative;
+  }
+}
+
+// Float helpers
+.u-float {
+  &.-left {
+    float: left;
+  }
+  &.-right {
+    float: right;
+  }
+  &.-none {
+    float: none;
+  }
+}
+
+// Display helpers
+.u-display {
+  &.-block {
+    display: block;
+  }
+  &.-inline-block {
+    display: inline-block;
+  }
+  &.-inline {
+    display: inline;
+  }
+}
+
+// Widths helpers
+.u-width {
+  &.-fluid {
+    width: 100%;
+  }
+}
+
+// Gradients
+.u-gradient {
+  &.-white {
+    background: linear-gradient(to bottom, rgba(255,255,255, 1) 0, rgba(255,255,255, 0) 80%); 
+  }
+  &.-about,
+  &.-short {
+    background: linear-gradient(to bottom, rgba(255,255,255, 1) 0, rgba(255,255,255, 0) 400px); 
+  }
+}

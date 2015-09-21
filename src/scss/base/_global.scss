@@ -1,0 +1,40 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body {
+  position: relative;
+  overflow: hidden;
+  min-width: 320px;
+  font-size: $font-size;
+  cursor: default;
+  
+  // For js detection of media queries
+  &:after {
+    display: none;
+    content: 'desktop';
+
+    @include respond-to(handheld) {
+      content: 'handheld';
+    }
+
+    @include respond-to(tablet) {
+      content: 'tablet';
+    }
+
+    @include respond-to(mobile) {
+      content: 'mobile';
+    }
+  }
+
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

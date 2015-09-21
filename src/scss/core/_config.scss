@@ -1,0 +1,69 @@
+// 
+// Layout
+// --------------------------
+
+$sitevision: false; // Changes grid
+
+// Breakpoints
+$breakpoints: (
+  'mobile': 520px,
+  'tablet': 900px,
+  'handheld': 1024px,
+  'desktop': 1440px
+) !default;
+
+$tweakpoints: ();
+
+// Grid
+$grid-width: 100%;
+$grid-max-width: 1230px;
+$grid-padding: (
+  'desktop': 15px,
+  'tablet': 15px,
+  'mobile': 10px
+) !default;
+
+$grid-columns: 12;
+$grid-columns-width: (100% / $grid-columns);
+$grid-columns-padding: (
+  'desktop': 15px,
+  'tablet': 10px,
+  'mobile': 5px
+) !default;
+
+// 
+// Typography
+// --------------------------
+
+// Font
+$font-family: 'Open Sans', Arial, sans-serif;
+$font-family-alt: 'Oswald', Arial, sans-serif;
+$font-size: 17px; // Base font size
+
+// 
+// Animation
+// --------------------------
+
+// Easings
+$swift-out: cubic-bezier(.55, 0, .1, 1);
+$apple-ease: cubic-bezier(.4, .01, .165, .99);
+$apple-ease-two: cubic-bezier(.28, .11, .32, 1);
+
+// Default easing
+$default-easing: $swift-out;
+
+// 
+// Colors
+// --------------------------
+
+$color-black: #1a1a1a;
+$color-light-black: #303030;
+$color-dark-gray: #575656;
+$color-gray: #646464;
+$color-orange: #ff5825;
+$color-yellow: #ffcd00;
+$color-beige: #f7f7e8;
+
+$color-facebook: #3b579d;
+$color-twitter: #5faade;
+$color-googleplus: #dd4b38;

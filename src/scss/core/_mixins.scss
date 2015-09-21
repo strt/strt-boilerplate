@@ -1,0 +1,107 @@
+// 
+// Clearfix
+// --------------------------
+
+@mixin clearfix() {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// 
+// REM
+// --------------------------
+
+@function calculateRem($size) {
+  $remSize: $size / $font-size;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+// 
+// Opacity
+// --------------------------
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8 fix
+}
+
+// 
+// Responsive helpers
+// --------------------------
+
+@mixin respond-to($point) {
+  @if map-has-key($tweakpoints, $point) {
+    @media only screen and (max-width: map-get($tweakpoints, $point)) { 
+      @content; 
+    }
+  }
+  @else if map-has-key($breakpoints, $point) {
+    @media only screen and (max-width: map-get($breakpoints, $point)) { 
+      @content; 
+    }
+  }
+  @else if $point == retina { // for retina devices
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+      @content;
+    }
+  }
+  @else if $point == print { // print styling
+    @media print {
+      @content;
+    }
+  }
+  @else {
+    @warn "Could not find point in $tweakpoints or $breakpoints.";
+  }
+}
+
+// 
+// Columns (experimental)
+// --------------------------
+
+@mixin column($desktop: $grid-columns, $tablet: $grid-columns, $mobile: $grid-columns, $percentage: false ) {
+  @extend %column;
+
+  @if(unitless($desktop)) {
+    width: unquote("#{$grid-columns-width * $mobile}%");
+
+    @include respond-to(desktop) {
+      width: unquote("#{$grid-columns-width * $desktop}%");
+    }
+
+    @include respond-to(tablet) {
+      width: unquote("#{$grid-columns-width * $tablet}%");
+    }
+  }
+  @else {
+
+    @if(unitless($mobile)) {
+      $mobile: 100%;
+    }
+    @if(unitless($tablet)) {
+      $tablet: 100%;
+    }
+
+    width: $mobile;
+
+    @include respond-to(desktop) {
+      width: $desktop;
+    }
+
+    @include respond-to(tablet) {
+      width: $tablet;
+    }
+  }
+}

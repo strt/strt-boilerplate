@@ -1,0 +1,118 @@
+.grid {
+  @include clearfix();
+  width: $grid-width;
+  max-width: $grid-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0; // Remove unwanted whitespace between inline-blocks
+
+  &.-fluid {
+    max-width: $grid-width;
+  }
+
+  &.-pad {
+    padding-left: map-get($grid-padding, 'desktop');
+    padding-right: map-get($grid-padding, 'desktop');
+
+    @include respond-to(handheld) {
+      padding-left: map-get($grid-padding, 'tablet');
+      padding-right: map-get($grid-padding, 'tablet');
+    }
+
+    @include respond-to(mobile) {
+      padding-left: map-get($grid-padding, 'mobile');
+      padding-right: map-get($grid-padding, 'mobile');
+    }
+  }
+
+  &.-full-width-mobile {
+    @include respond-to(mobile) {
+      margin-left: -((map-get($grid-columns-padding, 'mobile')) + (map-get($grid-padding, 'mobile')));
+      margin-right: -((map-get($grid-columns-padding, 'mobile')) + (map-get($grid-padding, 'mobile')));
+      width: auto;
+    }
+  }
+
+  &__column {
+    display: inline-block;
+    vertical-align: top;
+    min-height: 1px;
+    font-size: $font-size;
+
+    .grid.-pad & {
+      padding-left: map-get($grid-columns-padding, 'desktop');
+      padding-right: map-get($grid-columns-padding, 'desktop');
+
+      @include respond-to(handheld) {
+        padding-left: map-get($grid-columns-padding, 'tablet');
+        padding-right: map-get($grid-columns-padding, 'tablet');
+      }
+
+      @include respond-to(mobile) {
+        padding-left: map-get($grid-columns-padding, 'mobile');
+        padding-right: map-get($grid-columns-padding, 'mobile');
+      }
+    }
+
+    &.-no-pad {
+      padding-right: 0;
+      padding-left: 0; 
+    }
+
+    // IE 7 fix
+    .oldie & {
+      zoom: 1;
+      *display: inline;
+    }
+
+    // Desktop columns
+    &.-desktop {
+
+      @for $i from 1 through $grid-columns {
+        &--#{$i} {
+          width: $i * $grid-columns-width;   
+        }
+      }
+
+      // Set default width tablet
+      @include respond-to(tablet) {
+        @for $i from 1 through $grid-columns {
+          &--#{$i} {
+            width: 100%;   
+          }
+        }
+      }
+    }
+    
+    // Tablet columns
+    &.-tablet {
+      @include respond-to(tablet) {
+        @for $i from 1 through $grid-columns {
+          &--#{$i} {
+            width: $i * $grid-columns-width;   
+          }
+        }
+      }
+      // Set default width mobile
+      @include respond-to(mobile) {
+        @for $i from 1 through $grid-columns {
+          &--#{$i} {
+            width: 100%;   
+          }
+        }
+      }
+    }
+
+    // Mobile columns
+    &.-mobile {
+      @include respond-to(mobile) {
+        @for $i from 1 through $grid-columns {
+          &--#{$i} {
+            width: $i * $grid-columns-width;   
+          }
+        }
+      }
+    }
+
+  }
+}

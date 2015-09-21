@@ -1,0 +1,21 @@
+{
+  "src": "src",
+  "dist": "public/dist",
+  "sitevision": false,
+  "sass": [
+    "main.scss"
+  ],
+  "scripts": [
+    "main.js"
+  ],
+  "browserify": {
+    "paths": [
+      "js/modules"
+    ]
+  },
+  "proxy": {
+    "init": false,
+    "port": 8989,
+    "file": "./proxy.js"
+  }
+}
