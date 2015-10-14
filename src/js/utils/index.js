@@ -8,6 +8,7 @@ module.exports = (function() {
   self.cookie = require('./cookie.js');
   self.xmlToJson = require('./xmlToJson.js');
   self.number = require('./number.js');
+  self.nano = require('./nano.js');
 
   // Custom easings
   self.easings = {
