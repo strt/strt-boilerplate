@@ -1,15 +1,15 @@
 {
-  "name": "Strateg",
+  "name": "strt-boilerplate",
   "version": "1.0.2",
   "private": true,
-  "description": "Strateg development packages",
+  "description": "Strateg Boilerplate",
   "author": "Strateg Marknadsföring AB",
   "license": "MIT",
   "main": "gulpfile.js",
   "dependencies": {
-    "gulp": "^3.9.0",
+    "gulp": "3.9.0",
     "browserify": "11.0.1",
-    "browserify-shim": "^3.8.10",
+    "browserify-shim": "3.8.10",
     "strt-gulpfile": "https://github.com/strt/gulpfile.git"
   },
   "repository": {
