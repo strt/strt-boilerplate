@@ -11,7 +11,6 @@ body {
   position: relative;
   overflow: hidden;
   min-width: 320px;
-  font-size: $font-size;
   cursor: default;
   
   // For js detection of media queries
@@ -19,15 +18,15 @@ body {
     display: none;
     content: 'desktop';
 
-    @include respond-to(handheld) {
+    @include breakpoint(handheld) {
       content: 'handheld';
     }
 
-    @include respond-to(tablet) {
+    @include breakpoint(tablet) {
       content: 'tablet';
     }
 
-    @include respond-to(mobile) {
+    @include breakpoint(mobile) {
       content: 'mobile';
     }
   }
@@ -35,6 +34,9 @@ body {
 }
 
 img {
+  display: inline-block;
+  vertical-align: middle;
   max-width: 100%;
   height: auto;
+  -ms-interpolation-mode: bicubic;
 }

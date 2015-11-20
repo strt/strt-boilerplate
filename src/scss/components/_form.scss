@@ -1,0 +1,33 @@
+// Form elements
+input[type="text"], 
+input[type="email"] {
+  appearance: none;
+  border: none;
+  background: transparent;
+  border-radius: 0;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+button,
+input[type="submit"] {
+  display: inline-block;
+  vertical-align: top;
+  appearance: none;
+  outline: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  line-height: 1em;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}

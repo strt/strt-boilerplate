@@ -1,107 +1,91 @@
 // 
 // Clearfix
 // --------------------------
-
-@mixin clearfix() {
-  *zoom: 1;
-  &:before, &:after {
-    content: " ";
+@mixin clearfix {
+  &:before, 
+  &:after {
+    content: ' ';
     display: table;
   }
+
   &:after {
     clear: both;
   }
 }
 
-// 
-// REM
-// --------------------------
-
-@function calculateRem($size) {
-  $remSize: $size / $font-size;
-  @return $remSize * 1rem;
-}
-
-@mixin font-size($size) {
-  font-size: $size;
-  font-size: calculateRem($size);
-}
 
 // 
-// Opacity
+// Breakpoints
 // --------------------------
+@mixin breakpoint($value) {
 
-@mixin opacity($opacity) {
-  opacity: $opacity;
-  $opacity-ie: $opacity * 100;
-  filter: alpha(opacity=$opacity-ie); //IE8 fix
+  $bp: nth($value, 1);
+  $dir: if(length($value) > 1, nth($value, 2), down);
+  
+  @if $dir == 'down' {
+    @if type-of($bp) == 'number' and unit($bp) == 'px' {
+      @media only screen and (max-width: $bp) { 
+        @content; 
+      }
+    }
+    @else if map-has-key($tweakpoints, $bp) {
+      @media only screen and (max-width: map-get($tweakpoints, $bp)) { 
+        @content; 
+      }
+    }
+    @else if map-has-key($breakpoints, $bp) {
+      @media only screen and (max-width: map-get($breakpoints, $bp)) { 
+        @content; 
+      }
+    }
+    @else {
+      @warn "Could not find point in $tweakpoints or $breakpoints.";
+    }
+  } 
+  @else if $dir == 'up' {
+    @if type-of($bp) == 'number' and unit($bp) == 'px' {
+      @media only screen and (min-width: $bp) { 
+        @content; 
+      }
+    }
+    @else if map-has-key($tweakpoints, $bp) {
+      @media only screen and (min-width: map-get($tweakpoints, $bp)) { 
+        @content; 
+      }
+    }
+    @else if map-has-key($breakpoints, $bp) {
+      @media only screen and (min-width: map-get($breakpoints, $bp)) { 
+        @content; 
+      }
+    }
+    @else {
+      @warn "Could not find point in $tweakpoints or $breakpoints.";
+    }
+  }
+
 }
 
 // 
-// Responsive helpers
+// Grid
 // --------------------------
 
-@mixin respond-to($point) {
-  @if map-has-key($tweakpoints, $point) {
-    @media only screen and (max-width: map-get($tweakpoints, $point)) { 
-      @content; 
-    }
+@mixin grid-column($value: 12) {
+
+  $val: nth($value, 1);
+  @if length($value) > 2 {
+    $grid-columns-width: (100 / nth($value, 3));
   }
-  @else if map-has-key($breakpoints, $point) {
-    @media only screen and (max-width: map-get($breakpoints, $point)) { 
-      @content; 
-    }
-  }
-  @else if $point == retina { // for retina devices
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-      @content;
-    }
-  }
-  @else if $point == print { // print styling
-    @media print {
-      @content;
-    }
+  
+  @if unitless($val) {
+    width: unquote("#{$grid-columns-width * $val}%");
+  } 
+  @else if type-of($val) == 'number' and unit($val) == '%' {
+    width: $val
   }
   @else {
-    @warn "Could not find point in $tweakpoints or $breakpoints.";
+    @warn "Parameter must be an interger!";
   }
-}
 
-// 
-// Columns (experimental)
-// --------------------------
+  @extend .grid__column;
 
-@mixin column($desktop: $grid-columns, $tablet: $grid-columns, $mobile: $grid-columns, $percentage: false ) {
-  @extend %column;
-
-  @if(unitless($desktop)) {
-    width: unquote("#{$grid-columns-width * $mobile}%");
-
-    @include respond-to(desktop) {
-      width: unquote("#{$grid-columns-width * $desktop}%");
-    }
-
-    @include respond-to(tablet) {
-      width: unquote("#{$grid-columns-width * $tablet}%");
-    }
-  }
-  @else {
-
-    @if(unitless($mobile)) {
-      $mobile: 100%;
-    }
-    @if(unitless($tablet)) {
-      $tablet: 100%;
-    }
-
-    width: $mobile;
-
-    @include respond-to(desktop) {
-      width: $desktop;
-    }
-
-    @include respond-to(tablet) {
-      width: $tablet;
-    }
-  }
 }

@@ -2,8 +2,6 @@
 // Layout
 // --------------------------
 
-$sitevision: false; // Changes grid
-
 // Breakpoints
 $breakpoints: (
   'mobile': 520px,
@@ -12,33 +10,38 @@ $breakpoints: (
   'desktop': 1440px
 ) !default;
 
+// Tweakpoints
 $tweakpoints: ();
 
 // Grid
-$grid-width: 100%;
-$grid-max-width: 1230px;
-$grid-padding: (
+$grid-width: 100% !default;
+$grid-max-width: 1230px !default;
+$grid-columns: 12 !default;
+$grid-columns-width: (100 / $grid-columns) !default;
+
+// Grid gutter
+$grid-gutter: (
   'desktop': 15px,
   'tablet': 15px,
   'mobile': 10px
 ) !default;
 
-$grid-columns: 12;
-$grid-columns-width: (100% / $grid-columns);
-$grid-columns-padding: (
+// Grid column gutter
+$grid-column-gutter: (
   'desktop': 15px,
   'tablet': 10px,
   'mobile': 5px
 ) !default;
+
 
 // 
 // Typography
 // --------------------------
 
 // Font
-$font-family: 'Open Sans', Arial, sans-serif;
-$font-family-alt: 'Oswald', Arial, sans-serif;
-$font-size: 17px; // Base font size
+$font-family: -apple-system, BlinkMacSystemFont, 'Helvetica', Arial, sans-serif !default;
+$font-size: 17px !default; // Base font size
+
 
 // 
 // Animation
@@ -50,7 +53,8 @@ $apple-ease: cubic-bezier(.4, .01, .165, .99);
 $apple-ease-two: cubic-bezier(.28, .11, .32, 1);
 
 // Default easing
-$default-easing: $swift-out;
+$default-easing: $swift-out !default;
+
 
 // 
 // Colors
