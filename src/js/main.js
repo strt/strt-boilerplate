@@ -4,7 +4,8 @@ require('jQuery');
 require('velocity');
 
 // Utils
-window.utils = require('./utils');
+window.strt = {}
+window.strt.utils = require('./utils');
 
 // Modules
 // require('example.js');
