@@ -83,7 +83,7 @@
     width: $val
   }
   @else {
-    @warn "Parameter must be an interger!";
+    @warn "Parameter must be an integer!";
   }
 
   @extend .grid__column;
