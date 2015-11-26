@@ -1,0 +1,19 @@
+// Fix stupid sitevision things
+.sv-text-portlet {
+  & ul {
+    list-style: square;
+    list-style-position: inside;
+  }
+  & ol {
+    list-style: decimal;
+    list-style-position: inside;
+  }
+}
+
+.sv-portlet p {
+  margin-top: 0;
+}
+
+.sv-responsive .sv-image-portlet img {
+  width: auto;
+}

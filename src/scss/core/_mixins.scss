@@ -65,10 +65,12 @@
 
 }
 
+
 // 
 // Grid
 // --------------------------
 
+// Grid column mixin
 @mixin grid-column($value: 12) {
 
   $val: nth($value, 1);
@@ -87,5 +89,59 @@
   }
 
   @extend .grid__column;
+
+}
+
+// Grid column offset mixin
+@mixin grid-column-offset($value: 1) {
+  
+  $val: nth($value, 1);
+  @if length($value) > 2 {
+    $grid-columns-width: (100 / nth($value, 3));
+  }
+
+  margin-left: unquote("#{$grid-columns-width * $val}%");
+
+}
+
+
+// 
+// Reset input
+// --------------------------
+
+@mixin reset-input($el) {
+
+  @if $el == 'button' {
+    display: inline-block;
+    vertical-align: top;
+    appearance: none;
+    outline: none;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    line-height: 1em;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  @elseif $el == 'text' {
+    appearance: none;
+    border: none;
+    background: transparent;
+    border-radius: 0;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  @else {
+    @warn '"#{$el}" does not match any predefined reset elements'
+  }
 
 }
