@@ -1,5 +1,5 @@
-*, 
-*:before, 
+*,
+*:before,
 *:after {
   box-sizing: border-box;
 }
@@ -10,19 +10,14 @@ html {
 }
 
 body {
-  position: relative;
-  overflow: hidden;
   min-width: 320px;
   cursor: default;
-  
+  line-height: 1;
+
   // For js detection of media queries
   &:after {
     display: none;
     content: 'desktop';
-
-    @include breakpoint(handheld) {
-      content: 'handheld';
-    }
 
     @include breakpoint(tablet) {
       content: 'tablet';
@@ -32,7 +27,6 @@ body {
       content: 'mobile';
     }
   }
-
 }
 
 img {
