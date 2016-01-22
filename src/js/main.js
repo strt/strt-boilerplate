@@ -1,11 +1,11 @@
-// Plugins
-require('modernizr');
-require('jQuery');
-require('velocity');
+'use strict'
 
-// Utils
-window.strt = {}
-window.strt.utils = require('./utils');
+// Globals
+global.Modernizr = require('./Modernizr');
+global.$ = require('jquery');
+global.velocity = require('velocity');
+
+global.strt = require('./utils');
 
 // Modules
-// require('example.js');
+require('example');

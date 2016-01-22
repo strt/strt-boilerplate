@@ -1,24 +1,19 @@
-'use strict';
+'use strict'
 
-module.exports = (function() {
+var Util = function() {
 
-  var self = {};
-
-  self.device = require('./device.js');
-  self.cookie = require('./cookie.js');
-  self.xmlToJson = require('./xmlToJson.js');
-  self.number = require('./number.js');
-  self.nano = require('./nano.js');
+  this.device = require('./device.js');
+  this.cookie = require('./cookie.js');
 
   // Custom easings
-  self.easings = {
+  this.easings = {
     swiftOut: [.55, 0, .1, 1],
     appleEase: [0.4, 0.01, 0.165, 0.99],
     appleEaseAlt: [.28, .11, .32, 1]
   };
 
   // Native alternative for jQuery $.extend
-  self.extend = function(a, b) {
+  this.extend = function(a, b) {
     for(var key in b) {
       if(b.hasOwnProperty(key)) {
         a[key] = b[key];
@@ -28,6 +23,6 @@ module.exports = (function() {
     return a;
   };
 
-  return self;
+};
 
-})();
+module.exports = new Util();

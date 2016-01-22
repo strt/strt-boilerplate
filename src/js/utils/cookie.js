@@ -1,11 +1,8 @@
-'use strict';
+'use strict'
 
-module.exports = (function() {
+var Cookie = function() {
 
-  var self = {};
-
-  // Set Cookie
-  self.set = function(name, value, time) {
+  this.set = function(name, value, time) {
     var expires = null;
     if(time) {
       var date = new Date();
@@ -17,8 +14,7 @@ module.exports = (function() {
     document.cookie = name+"="+value+expires+"; path=/";
   };
 
-  // Get cookie
-  self.get = function(name) {
+  this.get = function(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
     var i = ca.length;
@@ -30,11 +26,10 @@ module.exports = (function() {
     return null;
   };
 
-  // Delete cookie
-  self.delete = function(name) {
-    self.set(name,"",-1);
+  this.delete = function(name) {
+    this.set(name,"",-1);
   };
 
-  return self;
+};
 
-})();
+module.exports = new Cookie();

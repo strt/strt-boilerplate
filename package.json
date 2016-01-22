@@ -1,6 +1,6 @@
 {
   "name": "strt-boilerplate",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": true,
   "description": "Strateg Boilerplate",
   "author": "Strateg Marknadsföring AB",
@@ -8,26 +8,11 @@
   "main": "gulpfile.js",
   "dependencies": {
     "gulp": "3.9.0",
-    "browserify": "11.0.1",
-    "browserify-shim": "3.8.10",
+    "browserify": "13.0.0",
+    "browserify-shim": "3.8.12",
     "strt-gulpfile": "https://github.com/strt/gulpfile.git"
   },
   "repository": {
     "type": "git"
-  },
-  "browser": {
-    "jQuery": "./public/dist/lib/jquery/dist/jquery.min.js",
-    "modernizr": "./public/dist/lib/modernizr/modernizr.js",
-    "velocity": "./public/dist/lib/velocity/velocity.min.js"
-  },
-  "browserify": {
-    "transform": [
-      "browserify-shim"
-    ]
-  },
-  "browserify-shim": {
-    "jQuery": "jQuery",
-    "modernizr": "modernizr",
-    "velocity": "velocity"
   }
 }
