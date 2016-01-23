@@ -1,9 +1,12 @@
 'use strict'
 
+var Util = require('../utils');
+
 var Example = function() {
 
-  console.log(strt.device);
+  console.log(Util.device);
+  console.log(Modernizr.touchevents);
 
 };
 
-module.exports = new Example();
+module.exports = Example();
