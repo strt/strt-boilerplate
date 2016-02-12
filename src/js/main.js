@@ -2,8 +2,8 @@
 
 // Globals
 require('./Modernizr');
-global.$ = require('jquery');
-global.velocity = require('velocity');
+require('jquery');
+require('velocity');
 
 // Modules
 require('example');

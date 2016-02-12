@@ -10,9 +10,22 @@
     "gulp": "3.9.0",
     "browserify": "13.0.0",
     "browserify-shim": "3.8.12",
-    "strt-gulpfile": "https://github.com/strt/gulpfile.git"
+    "strt-gulpfile": "strt/gulpfile.git"
   },
   "repository": {
     "type": "git"
+  },
+  "browser": {
+    "jquery": "./public/dist/lib/jquery/dist/jquery.min.js",
+    "velocity": "./public/dist/lib/velocity/velocity.min.js"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jquery": "jquery",
+    "velocity": "velocity"
   }
 }
