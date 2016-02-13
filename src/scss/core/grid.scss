@@ -11,33 +11,33 @@
   }
 
   &.-pad {
-    padding-left: map-get($grid-gutter, 'desktop');
-    padding-right: map-get($grid-gutter, 'desktop');
+    padding-left: map-get($grid-gutter, desktop);
+    padding-right: map-get($grid-gutter, desktop);
 
-    @include breakpoint(handheld) {
-      padding-left: map-get($grid-gutter, 'tablet');
-      padding-right: map-get($grid-gutter, 'tablet');
+    @include breakpoint(tablet) {
+      padding-left: map-get($grid-gutter, tablet);
+      padding-right: map-get($grid-gutter, tablet);
     }
 
     @include breakpoint(mobile) {
-      padding-left: map-get($grid-gutter, 'mobile');
-      padding-right: map-get($grid-gutter, 'mobile');
+      padding-left: map-get($grid-gutter, mobile);
+      padding-right: map-get($grid-gutter, mobile);
     }
   }
-  
+
   // When you want nested grid to align with parent grid
   &__reset {
-    margin-left: -(map-get($grid-gutter, 'desktop') + map-get($grid-column-gutter, 'desktop'));
-    margin-right: -(map-get($grid-gutter, 'desktop') + map-get($grid-column-gutter, 'desktop'));
+    margin-left: -(map-get($grid-gutter, desktop) + map-get($grid-column-gutter, desktop));
+    margin-right: -(map-get($grid-gutter, desktop) + map-get($grid-column-gutter, desktop));
 
-    @include breakpoint(handheld) {
-      margin-left: -(map-get($grid-gutter, 'tablet') + map-get($grid-column-gutter, 'tablet'));
-      margin-right: -(map-get($grid-gutter, 'tablet') + map-get($grid-column-gutter, 'tablet'));
+    @include breakpoint(tablet) {
+      margin-left: -(map-get($grid-gutter, tablet) + map-get($grid-column-gutter, tablet));
+      margin-right: -(map-get($grid-gutter, tablet) + map-get($grid-column-gutter, tablet));
     }
 
     @include breakpoint(mobile) {
-      margin-left: -(map-get($grid-gutter, 'mobile') + map-get($grid-column-gutter, 'mobile'));
-      margin-right: -(map-get($grid-gutter, 'mobile') + map-get($grid-column-gutter, 'mobile'));
+      margin-left: -(map-get($grid-gutter, mobile) + map-get($grid-column-gutter, mobile));
+      margin-right: -(map-get($grid-gutter, mobile) + map-get($grid-column-gutter, mobile));
     }
   }
 
@@ -48,23 +48,23 @@
     font-size: $font-size;
 
     .grid.-pad & {
-      padding-left: map-get($grid-column-gutter, 'desktop');
-      padding-right: map-get($grid-column-gutter, 'desktop');
+      padding-left: map-get($grid-column-gutter, desktop);
+      padding-right: map-get($grid-column-gutter, desktop);
 
-      @include breakpoint(handheld) {
-        padding-left: map-get($grid-column-gutter, 'tablet');
-        padding-right: map-get($grid-column-gutter, 'tablet');
+      @include breakpoint(tablet) {
+        padding-left: map-get($grid-column-gutter, tablet);
+        padding-right: map-get($grid-column-gutter, tablet);
       }
 
       @include breakpoint(mobile) {
-        padding-left: map-get($grid-column-gutter, 'mobile');
-        padding-right: map-get($grid-column-gutter, 'mobile');
+        padding-left: map-get($grid-column-gutter, mobile);
+        padding-right: map-get($grid-column-gutter, mobile);
       }
     }
 
     &.-no-pad {
       padding-right: 0;
-      padding-left: 0; 
+      padding-left: 0;
     }
 
     // Desktop columns
@@ -72,7 +72,7 @@
 
       @for $i from 1 through $grid-columns {
         &--#{$i} {
-          width: #{$i * $grid-columns-width}%;   
+          width: #{$i * $grid-columns-width}%;
         }
       }
 
@@ -80,18 +80,18 @@
       @include breakpoint(tablet) {
         @for $i from 1 through $grid-columns {
           &--#{$i} {
-            width: 100%;   
+            width: 100%;
           }
         }
       }
     }
-    
+
     // Tablet columns
     &.-tablet {
       @include breakpoint(tablet) {
         @for $i from 1 through $grid-columns {
           &--#{$i} {
-            width: #{$i * $grid-columns-width}%;   
+            width: #{$i * $grid-columns-width}%;
           }
         }
       }
@@ -99,7 +99,7 @@
       @include breakpoint(mobile) {
         @for $i from 1 through $grid-columns {
           &--#{$i} {
-            width: 100%;   
+            width: 100%;
           }
         }
       }
@@ -110,7 +110,7 @@
       @include breakpoint(mobile) {
         @for $i from 1 through $grid-columns {
           &--#{$i} {
-            width: #{$i * $grid-columns-width}%;   
+            width: #{$i * $grid-columns-width}%;
           }
         }
       }
