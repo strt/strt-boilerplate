@@ -1,8 +1,9 @@
-// 
+//
 // Clearfix
 // --------------------------
+
 @mixin clearfix {
-  &:before, 
+  &:before,
   &:after {
     content: ' ';
     display: table;
@@ -14,48 +15,49 @@
 }
 
 
-// 
+//
 // Breakpoints
 // --------------------------
+
 @mixin breakpoint($value) {
 
   $bp: nth($value, 1);
   $dir: if(length($value) > 1, nth($value, 2), down);
-  
+
   @if $dir == 'down' {
     @if type-of($bp) == 'number' and unit($bp) == 'px' {
-      @media only screen and (max-width: $bp) { 
-        @content; 
+      @media only screen and (max-width: $bp) {
+        @content;
       }
     }
     @else if map-has-key($tweakpoints, $bp) {
-      @media only screen and (max-width: map-get($tweakpoints, $bp)) { 
-        @content; 
+      @media only screen and (max-width: map-get($tweakpoints, $bp)) {
+        @content;
       }
     }
     @else if map-has-key($breakpoints, $bp) {
-      @media only screen and (max-width: map-get($breakpoints, $bp)) { 
-        @content; 
+      @media only screen and (max-width: map-get($breakpoints, $bp)) {
+        @content;
       }
     }
     @else {
       @warn "Could not find point in $tweakpoints or $breakpoints.";
     }
-  } 
+  }
   @else if $dir == 'up' {
     @if type-of($bp) == 'number' and unit($bp) == 'px' {
-      @media only screen and (min-width: $bp) { 
-        @content; 
+      @media only screen and (min-width: $bp) {
+        @content;
       }
     }
     @else if map-has-key($tweakpoints, $bp) {
-      @media only screen and (min-width: map-get($tweakpoints, $bp)) { 
-        @content; 
+      @media only screen and (min-width: map-get($tweakpoints, $bp)) {
+        @content;
       }
     }
     @else if map-has-key($breakpoints, $bp) {
-      @media only screen and (min-width: map-get($breakpoints, $bp)) { 
-        @content; 
+      @media only screen and (min-width: map-get($breakpoints, $bp)) {
+        @content;
       }
     }
     @else {
@@ -66,7 +68,7 @@
 }
 
 
-// 
+//
 // Grid
 // --------------------------
 
@@ -77,10 +79,10 @@
   @if length($value) > 2 {
     $grid-columns-width: (100 / nth($value, 3));
   }
-  
+
   @if unitless($val) {
     width: unquote("#{$grid-columns-width * $val}%");
-  } 
+  }
   @else if type-of($val) == 'number' and unit($val) == '%' {
     width: $val
   }
@@ -94,7 +96,7 @@
 
 // Grid column offset mixin
 @mixin grid-column-offset($value: 1) {
-  
+
   $val: nth($value, 1);
   @if length($value) > 2 {
     $grid-columns-width: (100 / nth($value, 3));
@@ -105,7 +107,7 @@
 }
 
 
-// 
+//
 // Reset input
 // --------------------------
 

@@ -1,20 +1,23 @@
-// General typography
-body,
-body a {
+body {
   font-family: $font-family;
   font-size: $font-size;
+
+  & a {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+  }
 }
 
-b, 
+b,
 strong {
   font-weight: bold;
   line-height: inherit;
 }
 
-i, 
+i,
 em {
-  font-size: italic;
+  font-style: italic;
   line-height: inherit;
 }
-
-// Create your h1, p and etc styles below

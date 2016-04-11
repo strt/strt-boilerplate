@@ -1,3 +1,7 @@
+//
+// Grid
+// --------------------------
+
 .grid {
   @include clearfix;
   width: $grid-width;
@@ -25,7 +29,7 @@
     }
   }
 
-  // When you want nested grid to align with parent grid
+  // When you want nested grid inside column to align with parent grid
   &__reset {
     margin-left: -(map-get($grid-gutter, desktop) + map-get($grid-column-gutter, desktop));
     margin-right: -(map-get($grid-gutter, desktop) + map-get($grid-column-gutter, desktop));
@@ -40,6 +44,11 @@
       margin-right: -(map-get($grid-gutter, mobile) + map-get($grid-column-gutter, mobile));
     }
   }
+
+
+  //
+  // Columns
+  // --------------------------
 
   &__column {
     display: inline-block;
@@ -67,11 +76,10 @@
       padding-left: 0;
     }
 
-    // Desktop columns
     &.-desktop {
 
       @for $i from 1 through $grid-columns {
-        &--#{$i} {
+        &-#{$i} {
           width: #{$i * $grid-columns-width}%;
         }
       }
@@ -79,42 +87,47 @@
       // Set default width tablet
       @include breakpoint(tablet) {
         @for $i from 1 through $grid-columns {
-          &--#{$i} {
+          &-#{$i} {
             width: 100%;
           }
         }
       }
+
     }
 
-    // Tablet columns
     &.-tablet {
+
       @include breakpoint(tablet) {
         @for $i from 1 through $grid-columns {
-          &--#{$i} {
+          &-#{$i} {
             width: #{$i * $grid-columns-width}%;
           }
         }
       }
+
       // Set default width mobile
       @include breakpoint(mobile) {
         @for $i from 1 through $grid-columns {
-          &--#{$i} {
+          &-#{$i} {
             width: 100%;
           }
         }
       }
+
     }
 
-    // Mobile columns
     &.-mobile {
+
       @include breakpoint(mobile) {
         @for $i from 1 through $grid-columns {
-          &--#{$i} {
+          &-#{$i} {
             width: #{$i * $grid-columns-width}%;
           }
         }
       }
+
     }
 
   }
+
 }
