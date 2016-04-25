@@ -80,7 +80,7 @@
 
       @for $i from 1 through $grid-columns {
         &-#{$i} {
-          width: #{$i * $grid-columns-width}%;
+          width: #{$i * $grid-columns-width * 1%};
         }
       }
 
@@ -100,7 +100,7 @@
       @include breakpoint(tablet) {
         @for $i from 1 through $grid-columns {
           &-#{$i} {
-            width: #{$i * $grid-columns-width}%;
+            width: #{$i * $grid-columns-width * 1%};
           }
         }
       }
@@ -121,7 +121,7 @@
       @include breakpoint(mobile) {
         @for $i from 1 through $grid-columns {
           &-#{$i} {
-            width: #{$i * $grid-columns-width}%;
+            width: #{$i * $grid-columns-width * 1%};
           }
         }
       }
