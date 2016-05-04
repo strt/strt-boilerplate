@@ -1,13 +1,29 @@
 'use strict'
 
-var Device = function() {
+var events = require('./events.js');
 
-  this.getBreakpoint = function() {
-    return window.getComputedStyle ? window.getComputedStyle(document.body,':after').getPropertyValue('content').replace(/['"]+/g, '') : 'desktop'
-  };
-  this.breakpoint = this.getBreakpoint();
-  this.isMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) || this.breakpoint === 'mobile' || this.breakpoint === 'tablet' ? true : false;
+var device = {
+  breakpoint: 'desktop',
+  init: function() {
+    this.bindEvents();
+    this.setBreakpoint();
+  },
+  bindEvents: function() {
+    window.addEventListener('resize', this.setBreakpoint.bind(this));
+  },
+  setBreakpoint: function() {
+    if (!window.getComputedStyle) {
+      return;
+    }
 
+    var newBreakpoint = window.getComputedStyle(document.body, ':after').getPropertyValue('content').replace(/['"]+/g, '');
+    if (this.breakpoint !== newBreakpoint) {
+      this.breakpoint = newBreakpoint;
+      events.publish('breakpointChange', this.breakpoint);
+    }
+  }
 };
 
-module.exports = new Device();
+device.init();
+
+module.exports = device.breakpoint;

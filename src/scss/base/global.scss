@@ -19,12 +19,10 @@ body {
     display: none;
     content: 'desktop';
 
-    @include breakpoint(tablet) {
-      content: 'tablet';
-    }
-
-    @include breakpoint(mobile) {
-      content: 'mobile';
+    @each $breakpoint, $value in $breakpoints {
+      @include breakpoint($breakpoint) {
+        content: '#{$breakpoint}';
+      }
     }
   }
 }
