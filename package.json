@@ -10,7 +10,7 @@
     "gulp": "3.9.1",
     "browserify": "13.0.0",
     "browserify-shim": "3.8.12",
-    "strt-gulpfile": "strt/gulpfile.git"
+    "strt-gulpfile": "strt/gulpfile.git#new"
   },
   "repository": {
     "type": "git"

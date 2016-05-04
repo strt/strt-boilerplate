@@ -14,7 +14,7 @@ body {
   cursor: default;
   line-height: 1;
 
-  // For js detection of media queries
+  // js detection of breakpoints
   &:after {
     display: none;
     content: 'desktop';

@@ -8,7 +8,7 @@ var example = function() {
   console.log(utils.device);
 
   // Set cookie example
-  utils.cookie.set('test', 'value');
+  utils.cookie.set('test', 'value', 1);
 
   // Events subscription example
   utils.events.subscribe('breakpointChange', function(breakpoint) {

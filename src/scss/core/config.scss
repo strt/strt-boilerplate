@@ -4,12 +4,11 @@
 
 $breakpoints: (
   desktop: 1200px,
-  tablet: 920px,
-  mobile: 480px
+  tablet: 940px,
+  mobile: 520px
 );
 
 $tweakpoints: ();
-
 
 //
 // Grid
@@ -18,7 +17,7 @@ $tweakpoints: ();
 $grid-width: 100%;
 $grid-max-width: 1200px;
 $grid-columns: 12;
-$grid-columns-width: (100 / $grid-columns);
+$grid-columns-width: (100 / $grid-columns) !default;
 
 $grid-gutter: (
   desktop: 15px,
@@ -32,7 +31,6 @@ $grid-column-gutter: (
   mobile: 5px
 );
 
-
 //
 // Typography
 // --------------------------
@@ -40,7 +38,6 @@ $grid-column-gutter: (
 $font-family: Helvetica, Arial, sans-serif;
 $font-family-alt: Georgia, serif;
 $font-size: 17px;
-
 
 //
 // Easings
@@ -51,7 +48,6 @@ $easings: (
   appleEase: cubic-bezier(.4, .01, .165, .99),
   appleEaseAlt: cubic-bezier(.28, .11, .32, 1)
 );
-
 
 //
 // Colors
@@ -67,4 +63,3 @@ $colors: (
   twitter: #5faade,
   googleplus: #dd4b38
 );
-

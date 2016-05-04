@@ -8,7 +8,7 @@
   max-width: $grid-max-width;
   margin-left: auto;
   margin-right: auto;
-  font-size: 0; // Remove unwanted whitespace between inline-blocks
+  font-size: 0;
 
   &.-fluid {
     max-width: $grid-width;
@@ -44,7 +44,6 @@
       margin-right: -(map-get($grid-gutter, mobile) + map-get($grid-column-gutter, mobile));
     }
   }
-
 
   //
   // Columns
@@ -92,7 +91,6 @@
           }
         }
       }
-
     }
 
     &.-tablet {
@@ -113,7 +111,6 @@
           }
         }
       }
-
     }
 
     &.-mobile {
@@ -125,7 +122,6 @@
           }
         }
       }
-
     }
 
   }

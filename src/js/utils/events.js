@@ -7,7 +7,6 @@ var events = {
     this.events[eventName].push(fn);
   },
   unsubscribe: function(eventName, fn) {
-
     if (!this.events[eventName]) {
       console.warn(eventName + ' does not exist in events object');
       return;
@@ -19,10 +18,8 @@ var events = {
         break;
       }
     };
-
   },
   publish: function(eventName, data) {
-
     if (!this.events[eventName]) {
       return;
     }
@@ -30,7 +27,6 @@ var events = {
     this.events[eventName].forEach(function(fn) {
       fn(data);
     });
-
   }
 };
 

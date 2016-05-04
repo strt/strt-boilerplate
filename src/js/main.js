@@ -1,6 +1,6 @@
 'use strict'
 
-// Globals
+// Plugins
 require('./Modernizr');
 require('jquery');
 require('velocity');

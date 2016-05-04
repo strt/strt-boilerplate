@@ -7,6 +7,7 @@ var device = {
   init: function() {
     this.bindEvents();
     this.setBreakpoint();
+    return this.breakpoint;
   },
   bindEvents: function() {
     window.addEventListener('resize', this.setBreakpoint.bind(this));
@@ -24,6 +25,4 @@ var device = {
   }
 };
 
-device.init();
-
-module.exports = device.breakpoint;
+module.exports = device.init();
