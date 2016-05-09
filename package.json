@@ -6,29 +6,13 @@
   "author": "Strateg Marknadsföring AB",
   "license": "MIT",
   "main": "gulpfile.js",
-  "dependencies": {
-    "gulp": "3.9.1",
-    "browserify": "13.0.0",
-    "browserify-shim": "3.8.12",
-    "strt-gulpfile": "strt/gulpfile.git"
+  "devDependencies": {
+    "gulp": "gulpjs/gulp#4.0"
   },
   "repository": {
     "type": "git"
   },
-  "browser": {
-    "jquery": "./public/dist/lib/jquery/dist/jquery.min.js",
-    "velocity": "./public/dist/lib/velocity/velocity.min.js"
-  },
-  "browserify": {
-    "transform": [
-      "browserify-shim"
-    ]
-  },
-  "browserify-shim": {
-    "jquery": "jquery",
-    "velocity": "velocity"
-  },
-  "scripts": {
-    "postinstall": "bower install"
+  "dependencies": {
+    "jquery": "^2.2.3"
   }
 }

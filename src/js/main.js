@@ -2,8 +2,6 @@
 
 // Plugins
 require('./Modernizr');
-require('jquery');
-require('velocity');
 
 // Modules
-require('example');
+require('./modules/example');

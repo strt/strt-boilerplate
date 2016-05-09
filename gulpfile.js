@@ -1,5 +1,17 @@
 'use strict';
 
 var gulp = require('gulp');
-var config = require('./config.json');
-var build = require('strt-gulpfile')(gulp, config);
+
+var tasks = require('../strt-gulpfile')({
+  src: 'src',
+  dist: 'public/dist'
+});
+
+gulp.task('default', gulp.series(
+  tasks.clean,
+  gulp.parallel(
+    tasks.styles,
+    tasks.scripts,
+    tasks.files
+  )
+))
