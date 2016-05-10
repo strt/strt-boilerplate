@@ -1,8 +1,8 @@
 {
   "name": "strt-boilerplate",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": true,
-  "description": "Strateg Boilerplate",
+  "description": "A simple starter kit for new projects",
   "author": "Strateg Marknadsföring AB",
   "license": "MIT",
   "main": "gulpfile.js",

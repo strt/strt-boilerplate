@@ -25,7 +25,7 @@ The difference between this grid and any other grid is that this grid uses inlin
 ##### A simple example
 ```html
 <div class="grid -pad">
-  <div class="grid__column -desktop--3 -tablet--6 -mobile--6"></div>
-  <div class="grid__column -desktop--3 -tablet--6 -mobile--6"></div>
+  <div class="grid__column -desktop-3 -tablet-6 -mobile-6"></div>
+  <div class="grid__column -desktop-3 -tablet-6 -mobile-6"></div>
 </div>
 ```

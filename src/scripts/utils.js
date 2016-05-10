@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var utils = {
   events: require('./utils/events.js'),
