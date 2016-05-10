@@ -11,7 +11,7 @@ gulp.task('default', gulp.series(
   tasks.clean,
   gulp.parallel(
     tasks.styles,
-    tasks.scripts,
-    tasks.files
+    tasks.files,
+    tasks.scripts
   )
-))
+));
