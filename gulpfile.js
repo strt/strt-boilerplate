@@ -12,6 +12,6 @@ gulp.task('default', gulp.series(
     tasks.styles,
     tasks.files,
     tasks.scripts
-  )
-  // tasks.watch
+  ),
+  tasks.watch
 ));
