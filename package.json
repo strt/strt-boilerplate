@@ -2,7 +2,7 @@
   "name": "strt-boilerplate",
   "version": "1.0.4",
   "private": true,
-  "description": "A simple starter kit for new projects",
+  "description": "A simple starter kit for new projects.",
   "author": "Strateg Marknadsföring AB",
   "license": "MIT",
   "main": "gulpfile.js",

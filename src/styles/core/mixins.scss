@@ -59,7 +59,7 @@
   } @else if type-of($val) == 'number' and unit($val) == '%' {
     width: $val;
   } @else {
-    @warn 'Parameter must be an integer!';
+    @warn 'Invalid value passed to grid-column mixin.';
   }
 
   @extend .grid__column;

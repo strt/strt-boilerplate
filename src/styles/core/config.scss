@@ -1,7 +1,4 @@
-//
 // Breakpoints
-// --------------------------
-
 $breakpoints: (
   desktop: 1200px,
   tablet: 940px,
@@ -10,10 +7,7 @@ $breakpoints: (
 
 $tweakpoints: ();
 
-//
 // Grid
-// --------------------------
-
 $grid-width: 100%;
 $grid-max-width: 1200px;
 $grid-columns: 12;
@@ -31,33 +25,25 @@ $grid-column-gutter: (
   mobile: 5px
 );
 
-//
 // Typography
-// --------------------------
-
 $font-family: Helvetica, Arial, sans-serif;
 $font-family-alt: Georgia, serif;
 $font-size: 17px;
 
-//
 // Easings
-// --------------------------
-
 $easings: (
   swiftOut: cubic-bezier(0.55, 0, 0.1, 1),
   appleEase: cubic-bezier(0.4, 0.01, 0.165, 0.99),
   appleEaseAlt: cubic-bezier(0.28, 0.11, 0.32, 1)
 );
 
-//
 // Colors
-// --------------------------
-
 $colors: (
   black: #1a1a1a,
   gray: #646464,
   orange: #ff5825,
   yellow: #ffcd00,
+
   // Social media colors
   facebook: #3b579d,
   twitter: #5faade,
