@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var events = require('./events.js');
 
@@ -17,7 +17,10 @@ var device = {
       return;
     }
 
-    var newBreakpoint = window.getComputedStyle(document.body, ':after').getPropertyValue('content').replace(/['"]+/g, '');
+    var newBreakpoint = window.getComputedStyle(document.body, ':after')
+      .getPropertyValue('content')
+      .replace(/['"]+/g, '');
+
     if (this.breakpoint !== newBreakpoint) {
       this.breakpoint = newBreakpoint;
       events.publish('breakpointChange', this.breakpoint);

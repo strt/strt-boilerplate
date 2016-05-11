@@ -6,8 +6,8 @@
   @include clearfix;
   width: $grid-width;
   max-width: $grid-max-width;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   font-size: 0;
 
   &.-fluid {
@@ -15,33 +15,33 @@
   }
 
   &.-pad {
-    padding-left: map-get($grid-gutter, desktop);
     padding-right: map-get($grid-gutter, desktop);
+    padding-left: map-get($grid-gutter, desktop);
 
     @include breakpoint(tablet) {
-      padding-left: map-get($grid-gutter, tablet);
       padding-right: map-get($grid-gutter, tablet);
+      padding-left: map-get($grid-gutter, tablet);
     }
 
     @include breakpoint(mobile) {
-      padding-left: map-get($grid-gutter, mobile);
       padding-right: map-get($grid-gutter, mobile);
+      padding-left: map-get($grid-gutter, mobile);
     }
   }
 
   // When you want nested grid inside column to align with parent grid
   &__reset {
-    margin-left: -(map-get($grid-gutter, desktop) + map-get($grid-column-gutter, desktop));
     margin-right: -(map-get($grid-gutter, desktop) + map-get($grid-column-gutter, desktop));
+    margin-left: -(map-get($grid-gutter, desktop) + map-get($grid-column-gutter, desktop));
 
     @include breakpoint(tablet) {
-      margin-left: -(map-get($grid-gutter, tablet) + map-get($grid-column-gutter, tablet));
       margin-right: -(map-get($grid-gutter, tablet) + map-get($grid-column-gutter, tablet));
+      margin-left: -(map-get($grid-gutter, tablet) + map-get($grid-column-gutter, tablet));
     }
 
     @include breakpoint(mobile) {
-      margin-left: -(map-get($grid-gutter, mobile) + map-get($grid-column-gutter, mobile));
       margin-right: -(map-get($grid-gutter, mobile) + map-get($grid-column-gutter, mobile));
+      margin-left: -(map-get($grid-gutter, mobile) + map-get($grid-column-gutter, mobile));
     }
   }
 
@@ -56,17 +56,17 @@
     font-size: $font-size;
 
     .grid.-pad & {
-      padding-left: map-get($grid-column-gutter, desktop);
       padding-right: map-get($grid-column-gutter, desktop);
+      padding-left: map-get($grid-column-gutter, desktop);
 
       @include breakpoint(tablet) {
-        padding-left: map-get($grid-column-gutter, tablet);
         padding-right: map-get($grid-column-gutter, tablet);
+        padding-left: map-get($grid-column-gutter, tablet);
       }
 
       @include breakpoint(mobile) {
-        padding-left: map-get($grid-column-gutter, mobile);
         padding-right: map-get($grid-column-gutter, mobile);
+        padding-left: map-get($grid-column-gutter, mobile);
       }
     }
 

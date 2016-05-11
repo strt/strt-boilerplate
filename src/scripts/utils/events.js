@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var events = {
   events: {},
@@ -8,7 +8,6 @@ var events = {
   },
   unsubscribe: function(eventName, fn) {
     if (!this.events[eventName]) {
-      console.warn(eventName + ' does not exist in events object');
       return;
     }
 
@@ -17,7 +16,7 @@ var events = {
         this.events[eventName].splice(i, 1);
         break;
       }
-    };
+    }
   },
   publish: function(eventName, data) {
     if (!this.events[eventName]) {

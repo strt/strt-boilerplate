@@ -3,13 +3,13 @@
 // --------------------------
 
 @mixin clearfix {
-  &:before,
-  &:after {
-    content: ' ';
+  &::before,
+  &::after {
     display: table;
+    content: ' ';
   }
 
-  &:after {
+  &::after {
     clear: both;
   }
 }
@@ -22,46 +22,22 @@
 
   $bp: nth($value, 1);
   $dir: if(length($value) > 1, nth($value, 2), down);
+  $media-query: if($dir == 'down', max-width, min-width);
 
-  @if $dir == 'down' {
-    @if type-of($bp) == 'number' and unit($bp) == 'px' {
-      @media only screen and (max-width: $bp) {
-        @content;
-      }
+  @if type-of($bp) == 'number' and unit($bp) == 'px' {
+    @media only screen and (#{$media-query}: $bp) {
+      @content;
     }
-    @else if map-has-key($tweakpoints, $bp) {
-      @media only screen and (max-width: map-get($tweakpoints, $bp)) {
-        @content;
-      }
+  } @else if map-has-key($tweakpoints, $bp) {
+    @media only screen and (#{$media-query}: map-get($tweakpoints, $bp)) {
+      @content;
     }
-    @else if map-has-key($breakpoints, $bp) {
-      @media only screen and (max-width: map-get($breakpoints, $bp)) {
-        @content;
-      }
+  } @else if map-has-key($breakpoints, $bp) {
+    @media only screen and (#{$media-query}: map-get($breakpoints, $bp)) {
+      @content;
     }
-    @else {
-      @warn "Could not find point in $tweakpoints or $breakpoints.";
-    }
-  }
-  @else if $dir == 'up' {
-    @if type-of($bp) == 'number' and unit($bp) == 'px' {
-      @media only screen and (min-width: $bp) {
-        @content;
-      }
-    }
-    @else if map-has-key($tweakpoints, $bp) {
-      @media only screen and (min-width: map-get($tweakpoints, $bp)) {
-        @content;
-      }
-    }
-    @else if map-has-key($breakpoints, $bp) {
-      @media only screen and (min-width: map-get($breakpoints, $bp)) {
-        @content;
-      }
-    }
-    @else {
-      @warn "Could not find point in $tweakpoints or $breakpoints.";
-    }
+  } @else {
+    @warn 'Could not find point in $tweakpoints or $breakpoints.';
   }
 
 }
@@ -79,13 +55,11 @@
   }
 
   @if unitless($val) {
-    width: unquote("#{$grid-columns-width * $val}%");
-  }
-  @else if type-of($val) == 'number' and unit($val) == '%' {
-    width: $val
-  }
-  @else {
-    @warn "Parameter must be an integer!";
+    width: #{$grid-columns-width * $val * 1%};
+  } @else if type-of($val) == 'number' and unit($val) == '%' {
+    width: $val;
+  } @else {
+    @warn 'Parameter must be an integer!';
   }
 
   @extend .grid__column;
@@ -100,7 +74,7 @@
     $grid-columns-width: (100 / nth($value, 3));
   }
 
-  margin-left: unquote("#{$grid-columns-width * $val}%");
+  margin-left: #{$grid-columns-width * $val * 1%};
 
 }
 
@@ -116,7 +90,7 @@
     appearance: none;
     outline: none;
     background: transparent;
-    border: none;
+    border: 0;
     border-radius: 0;
     padding: 0;
     margin: 0;
@@ -128,18 +102,18 @@
     &:focus {
       outline: none;
     }
-  }
-  @elseif $el == 'text' {
-    appearance: none;
-    border: none;
-    background: transparent;
+
+  } @elseif $el == 'text' {
+    border: 0;
     border-radius: 0;
+    background: transparent;
+    appearance: none;
 
     &:focus {
       outline: none;
     }
-  }
-  @else {
+
+  } @else {
     @warn '"#{$el}" does not match any predefined reset elements'
   }
 
