@@ -1,4 +1,4 @@
 public/dist
-dist/
+dist
 node_modules
 *.orig
