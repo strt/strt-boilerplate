@@ -3,7 +3,11 @@
   "version": "1.0.4",
   "private": true,
   "description": "A simple starter kit for new projects.",
-  "author": "Strateg Marknadsföring AB",
+  "author": {
+    "name": "Strateg Marknadsföring AB ",
+    "email": "development@strateg.se",
+    "url": "http://strateg.se"
+  },
   "license": "MIT",
   "main": "gulpfile.js",
   "devDependencies": {

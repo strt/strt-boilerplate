@@ -1,7 +1,4 @@
-//
 // Clearfix
-// --------------------------
-
 @mixin clearfix {
   &::before,
   &::after {
@@ -14,12 +11,8 @@
   }
 }
 
-//
-// Breakpoints
-// --------------------------
-
+// Breakpoint
 @mixin breakpoint($value) {
-
   $bp: nth($value, 1);
   $dir: if(length($value) > 1, nth($value, 2), down);
   $media-query: if($dir == 'down', max-width, min-width);
@@ -39,16 +32,11 @@
   } @else {
     @warn 'Could not find point in $tweakpoints or $breakpoints.';
   }
-
 }
 
-//
-// Grid
-// --------------------------
-
-// Grid column mixin
+// Grid column
 @mixin grid-column($value: 12) {
-
+  @extend .grid__column;
   $val: nth($value, 1);
   @if length($value) > 2 {
     $grid-columns-width: (100 / nth($value, 3));
@@ -61,29 +49,20 @@
   } @else {
     @warn 'Invalid value passed to grid-column mixin.';
   }
-
-  @extend .grid__column;
-
 }
 
-// Grid column offset mixin
+// Grid column offset
 @mixin grid-column-offset($value: 1) {
-
   $val: nth($value, 1);
   @if length($value) > 2 {
     $grid-columns-width: (100 / nth($value, 3));
   }
 
   margin-left: #{$grid-columns-width * $val * 1%};
-
 }
 
-//
 // Reset input
-// --------------------------
-
 @mixin reset-input($el) {
-
   @if $el == 'button' {
     display: inline-block;
     vertical-align: top;
@@ -116,5 +95,4 @@
   } @else {
     @warn '"#{$el}" does not match any predefined reset elements'
   }
-
 }
