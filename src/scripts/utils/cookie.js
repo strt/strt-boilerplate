@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var cookie = {
   set: function(name, value, time) {
