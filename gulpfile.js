@@ -1,7 +1,5 @@
-'use strict';
-
-var gulp = require('gulp');
-var tasks = require('../strt-gulpfile')({
+const gulp = require('gulp');
+const tasks = require('../strt-gulpfile')({
   src: 'src',
   dist: 'public/dist'
 });
