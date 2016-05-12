@@ -11,7 +11,8 @@ gulp.task('default', gulp.series(
   gulp.parallel(
     tasks.styles,
     tasks.files,
-    tasks.scripts
+    tasks.scripts,
+    tasks.images
   ),
   tasks.watch
 ));
