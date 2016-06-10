@@ -7,6 +7,7 @@ var device = {
   init: function() {
     this.bindEvents();
     this.setBreakpoint();
+
     return this.breakpoint;
   },
   bindEvents: function() {
