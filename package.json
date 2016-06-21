@@ -13,9 +13,7 @@
   "repository": {
     "type": "git"
   },
-  "dependencies": {
-    "jquery": "^2.2.3"
-  },
+  "dependencies": {},
   "devDependencies": {
     "gulp": "gulpjs/gulp#4.0",
     "eslint": "^2.9.0",
