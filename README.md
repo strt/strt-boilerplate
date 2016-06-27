@@ -7,8 +7,14 @@ A lightweight and simple boilerplate for your new project.
 
 ## Installation
 
+### Node
 ```
 $ npm install
+```
+
+### Gulp 4
+```
+$ npm install gulpjs/gulp-cli -g
 ```
 
 ## Gulp 
