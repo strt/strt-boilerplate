@@ -1,24 +1,24 @@
 'use strict';
 
-var events = require('./events.js');
+const events = require('./events.js');
 
-var device = {
+const device = {
   breakpoint: 'desktop',
-  init: function() {
+  init() {
     this.bindEvents();
     this.setBreakpoint();
 
     return this.breakpoint;
   },
-  bindEvents: function() {
+  bindEvents() {
     window.addEventListener('resize', this.setBreakpoint.bind(this));
   },
-  setBreakpoint: function() {
+  setBreakpoint() {
     if (!window.getComputedStyle) {
       return;
     }
 
-    var newBreakpoint = window.getComputedStyle(document.body, ':after')
+    const newBreakpoint = window.getComputedStyle(document.body, ':after')
       .getPropertyValue('content')
       .replace(/['"]+/g, '');
 

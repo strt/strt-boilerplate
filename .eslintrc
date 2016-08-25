@@ -2,8 +2,5 @@
   "extends": "google",
   "env": {
     "browser": true
-  },
-  "rules": {
-    "padded-blocks": "off"
   }
 }

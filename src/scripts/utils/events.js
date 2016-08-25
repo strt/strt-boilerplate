@@ -1,24 +1,24 @@
 'use strict';
 
-var events = {
+const events = {
   events: {},
-  subscribe: function(eventName, fn) {
+  subscribe(eventName, fn) {
     this.events[eventName] = this.events[eventName] || [];
     this.events[eventName].push(fn);
   },
-  unsubscribe: function(eventName, fn) {
+  unsubscribe(eventName, fn) {
     if (!this.events[eventName]) {
       return;
     }
 
-    for (var i = 0; i < this.events[eventName].length; i++) {
+    for (let i = 0; i < this.events[eventName].length; i++) {
       if (this.events[eventName][i] === fn) {
         this.events[eventName].splice(i, 1);
         break;
       }
     }
   },
-  publish: function(eventName, data) {
+  publish(eventName, data) {
     if (!this.events[eventName]) {
       return;
     }

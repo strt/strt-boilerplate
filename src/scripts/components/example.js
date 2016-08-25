@@ -1,17 +1,19 @@
 'use strict';
 
-var utils = require('../utils');
+const device = require('../utils/device');
+const cookie = require('../utils/cookie');
+const events = require('../utils/events');
 
-var example = function() {
+const example = function() {
 
   // Get device example
-  console.log(utils.device);
+  console.log(device);
 
   // Set cookie example
-  utils.cookie.set('test', 'value', 1);
+  cookie.set('test', 'value', 1);
 
   // Events subscription example
-  utils.events.subscribe('breakpointChange', function(breakpoint) {
+  events.subscribe('breakpointChange', breakpoint => {
     console.log(breakpoint);
   });
 
