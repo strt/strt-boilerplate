@@ -1,16 +1,17 @@
 const gulp = require('gulp');
 const tasks = require('strt-gulpfile')({
   src: 'src',
-  dist: 'public/dist'
+  dist: 'public/dist',
 });
 
 gulp.task('default', gulp.series(
   tasks.clean,
   gulp.parallel(
     tasks.styles,
+    tasks.images,
     tasks.files,
-    tasks.scripts,
-    tasks.images
+    tasks.icons,
+    tasks.scripts
   ),
-  tasks.watch
+  tasks.serve
 ));
