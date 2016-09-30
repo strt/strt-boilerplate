@@ -5,6 +5,7 @@ $breakpoints: (
   mobile: 520px
 );
 
+// Tweakpoints
 $tweakpoints: ();
 
 // Grid
@@ -28,7 +29,7 @@ $grid-column-gutter: (
 // Typography
 $font-family: Helvetica, Arial, sans-serif;
 $font-family-alt: Georgia, serif;
-$font-size: 17px;
+$font-size: 10px;
 
 // Easings
 $easings: (
@@ -41,7 +42,9 @@ $easings: (
 $colors: (
   black: #000000,
   white: #ffffff,
+  gray900: #101010,
   gray600: #646464,
+  gray100: #fefefe,
   orange: #ff5825,
   yellow: #ffcd00,
 
