@@ -15,3 +15,13 @@ gulp.task('default', gulp.series(
   ),
   tasks.serve
 ));
+
+gulp.task('production', gulp.series(
+  gulp.parallel(
+    tasks.styles,
+    tasks.images,
+    tasks.files,
+    tasks.icons,
+    tasks.scripts
+  )
+));
