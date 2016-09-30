@@ -2,3 +2,5 @@ public/dist
 dist
 node_modules
 *.orig
+.DS_Store
+.vagrant
