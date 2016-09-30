@@ -1,5 +1,3 @@
-'use strict';
-
 const events = require('./events.js');
 
 const device = {
@@ -26,7 +24,7 @@ const device = {
       this.breakpoint = newBreakpoint;
       events.publish('breakpointChange', this.breakpoint);
     }
-  }
+  },
 };
 
 module.exports = device.init();

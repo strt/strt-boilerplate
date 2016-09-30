@@ -1,5 +1,3 @@
-'use strict';
-
 const events = {
   events: {},
   subscribe(eventName, fn) {
@@ -11,7 +9,7 @@ const events = {
       return;
     }
 
-    for (let i = 0; i < this.events[eventName].length; i++) {
+    for (let i = 0; i < this.events[eventName].length; i += 1) {
       if (this.events[eventName][i] === fn) {
         this.events[eventName].splice(i, 1);
         break;
@@ -23,10 +21,10 @@ const events = {
       return;
     }
 
-    this.events[eventName].forEach(function(fn) {
+    this.events[eventName].forEach((fn) => {
       fn(data);
     });
-  }
+  },
 };
 
 module.exports = events;

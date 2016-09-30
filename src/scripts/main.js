@@ -1,5 +1,3 @@
-'use strict';
-
 // Modernizr
 require('./modernizr');
 

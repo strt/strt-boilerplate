@@ -1,5 +1,3 @@
-'use strict';
-
 const cookie = {
   set(name, value, time) {
     let expires = '';
@@ -19,7 +17,7 @@ const cookie = {
   },
   delete(name) {
     this.set(name, '', -1);
-  }
+  },
 };
 
 module.exports = cookie;
