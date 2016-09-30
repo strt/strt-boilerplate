@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "gulp": "github:gulpjs/gulp#4.0",
-    "strt-gulpfile": "github:strt/gulpfile#new"
+    "strt-gulpfile": "github:strt/gulpfile"
   },
   "devDependencies": {
     "eslint": "^3.6.1",
