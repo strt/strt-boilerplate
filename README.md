@@ -2,7 +2,7 @@
   <a href="http://strateg.se" target="_blank"><img src="https://avatars1.githubusercontent.com/u/1138008?v=3&s=200" alt="Strateg Marknadsföring" width="100"></a>
   <br><br>
   A lightweight boilerplate. Uses Gulp, SASS, Webpack, Babel, BrowserSync and more.
-  <br><br><br>
+  <br><br>
 </p>
 
 ## Setup
