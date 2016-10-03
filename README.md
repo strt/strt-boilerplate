@@ -1,5 +1,11 @@
-# strt-boilerplate
-A lightweight and simple boilerplate for your new project. 
+<p align="center">
+  <a href="http://strateg.se" target="_blank">
+    <img src="https://avatars1.githubusercontent.com/u/1138008?v=3&s=200" alt="Strateg Marknadsföring" />
+  </a>
+  <br /><
+  A lightweight boilerplate. Uses Gulp, SASS, Webpack, Babel, BrowserSync and more.
+  <br />
+</p>
 
 ## Setup
 1. Clone or copy this repo and rename it.
@@ -7,21 +13,22 @@ A lightweight and simple boilerplate for your new project.
 
 ## Installation
 
-### Node
-```
-$ npm install
-```
-
-### Gulp 4
+#### Gulp 4
 ```
 $ npm install gulpjs/gulp-cli -g
 ```
 
+#### Node modules
+```
+$ npm install
+```
+
 ## Usage 
-### Options
+
+#### Options
 See [strt-gulpfile](https://github.com/strt/strt-gulpfile) for available options.
 
-### Compile
+#### Build
 
 ```
 $ gulp
