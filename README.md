@@ -17,11 +17,11 @@ $ npm install
 $ npm install gulpjs/gulp-cli -g
 ```
 
-## Gulp 
+## Usage 
 ### Options
 See [strt-gulpfile](https://github.com/strt/strt-gulpfile) for available options.
 
-### Usage
+### Compile
 
 ```
 $ gulp
