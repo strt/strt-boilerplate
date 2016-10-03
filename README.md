@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="http://www.strateg.se" target="_blank"><img src="https://avatars1.githubusercontent.com/u/1138008?v=3&s=200" alt="Strateg Marknadsföring" width="100"></a>
+  <a href="http://www.strateg.se" target="_blank"><img src="http://www.strateg.se/images/18.a1e6bf01578783b6c19d43/1475494040088/strateg-logo.png" alt="Strateg Marknadsföring" width="320"></a>
   <br>
   A simple &amp; lightweight boilerplate.<br> Uses Gulp, SASS, Webpack, Babel, BrowserSync and more.
   <br><br>
