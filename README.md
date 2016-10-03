@@ -36,6 +36,7 @@ $ npm install gulpjs/gulp-cli -g
 
 #### Misc
 + Image optimization with imagemin
++ Live reloading with Browser sync
 + SVG icon bundling
 + ScotchBox ready
 
