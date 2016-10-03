@@ -1,6 +1,6 @@
 <p align="center">
   <a href="http://www.strateg.se" target="_blank"><img src="http://www.strateg.se/images/18.a1e6bf01578783b6c19d43/1475494040088/strateg-logo.png" alt="Strateg Marknadsföring" width="320"></a>
-  <br>
+  <br><br>
   A simple &amp; lightweight boilerplate.<br> Uses Gulp, SASS, Webpack, Babel, BrowserSync and more.
   <br><br>
 </p>
