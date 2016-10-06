@@ -15,7 +15,7 @@ body {
   cursor: default;
 
   // Enables JS detection of breakpoints
-  &:after {
+  &::after {
     display: none;
     content: 'desktop';
 
