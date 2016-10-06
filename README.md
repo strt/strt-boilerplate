@@ -13,7 +13,10 @@ Get it [here](http://editorconfig.org/).
 Preferably install with [NVM](https://github.com/creationix/nvm) or get it [here](https://nodejs.org). 
 
 #### Eslint
-Install the eslint plugin for your editor. Ex for Sublime, install SublimeLinter and SublimeLinter-contrib-eslint from Package Control.
+Install the eslint plugin for your editor. Ex for Sublime, install [SublimeLinter](https://packagecontrol.io/packages/SublimeLinter) and [SublimeLinter-contrib-eslint](https://packagecontrol.io/packages/SublimeLinter-contrib-eslint) from Package Control.
+
+#### Stylelint
+Install the eslint plugin for your editor. Ex for Sublime, install [SublimeLinter](https://packagecontrol.io/packages/SublimeLinter) and [SublimeLinter-contrib-stylelint](https://packagecontrol.io/packages/SublimeLinter-contrib-stylelint) from Package Control.
 
 #### Gulp
 ```
