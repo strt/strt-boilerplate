@@ -1,30 +1,23 @@
 const events = {
   events: {},
-  subscribe(eventName, fn) {
-    this.events[eventName] = this.events[eventName] || [];
-    this.events[eventName].push(fn);
+  on(name, fn) {
+    this.events[name] = this.events[name] || [];
+    this.events[name].push(fn);
   },
-  unsubscribe(eventName, fn) {
-    if (!this.events[eventName]) {
-      return;
-    }
 
-    for (let i = 0; i < this.events[eventName].length; i += 1) {
-      if (this.events[eventName][i] === fn) {
-        this.events[eventName].splice(i, 1);
-        break;
-      }
-    }
+  off(name, fn) {
+    if (!this.events[name]) return;
+
+    this.events[name] = this.events[name].filter(item => item !== fn);
   },
-  publish(eventName, data) {
-    if (!this.events[eventName]) {
-      return;
-    }
 
-    this.events[eventName].forEach((fn) => {
+  emit(name, data) {
+    if (!this.events[name]) return;
+
+    this.events[name].forEach((fn) => {
       fn(data);
     });
   },
 };
 
-module.exports = events;
+export default events;

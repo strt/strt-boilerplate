@@ -1,6 +1,6 @@
-const device = require('../utils/device');
-const cookie = require('../utils/cookie');
-const events = require('../utils/events');
+import device from '../utils/device';
+import cookie from '../utils/cookie';
+import events from '../utils/events';
 
 const example = function example() {
   // Get device example
@@ -10,9 +10,9 @@ const example = function example() {
   cookie.set('test', 'value', 1);
 
   // Events subscription example
-  events.subscribe('breakpointChange', (breakpoint) => {
+  events.on('breakpointChange', (breakpoint) => {
     console.log(breakpoint);
   });
 };
 
-module.exports = example();
+export default example();

@@ -1,5 +1,5 @@
 // Modernizr
-require('./modernizr');
+import './modernizr';
 
 // Components
-require('./components/example');
+import './components/example';

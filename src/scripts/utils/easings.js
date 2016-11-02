@@ -4,4 +4,4 @@ const easings = {
   appleEaseAlt: [0.28, 0.11, 0.32, 1],
 };
 
-module.exports = easings;
+export default easings;

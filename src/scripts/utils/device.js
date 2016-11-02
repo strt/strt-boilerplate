@@ -1,4 +1,4 @@
-const events = require('./events.js');
+import events from './events';
 
 const device = {
   breakpoint: 'desktop',
@@ -8,9 +8,11 @@ const device = {
 
     return this.breakpoint;
   },
+
   bindEvents() {
     window.addEventListener('resize', this.setBreakpoint.bind(this));
   },
+
   setBreakpoint() {
     if (!window.getComputedStyle) {
       return;
@@ -22,9 +24,9 @@ const device = {
 
     if (this.breakpoint !== newBreakpoint) {
       this.breakpoint = newBreakpoint;
-      events.publish('breakpointChange', this.breakpoint);
+      events.emit('breakpointChange', this.breakpoint);
     }
   },
 };
 
-module.exports = device.init();
+export default device.init();
