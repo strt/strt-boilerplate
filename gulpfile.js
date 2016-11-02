@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const gulp = require('gulp');
 const tasks = require('strt-gulpfile')({
   src: 'src',
