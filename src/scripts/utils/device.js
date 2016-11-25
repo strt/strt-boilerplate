@@ -14,9 +14,7 @@ const device = {
   },
 
   setBreakpoint() {
-    if (!window.getComputedStyle) {
-      return;
-    }
+    if (!window.getComputedStyle) return;
 
     const newBreakpoint = window.getComputedStyle(document.body, ':after')
       .getPropertyValue('content')

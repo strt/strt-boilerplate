@@ -1,13 +1,26 @@
 .grid {
-  @include clearfix;
+  display: flex;
+  flex-flow: row wrap;
   width: $grid-width;
   max-width: $grid-max-width;
   margin-right: auto;
   margin-left: auto;
-  font-size: 0;
 
   &.-fluid {
     max-width: none;
+  }
+
+  &.-centerItems {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.-verticalCenterItems {
+    align-items: center;
+  }
+
+  &.-horizontalCenterItems {
+    justify-content: center;
   }
 
   &.-pad {
@@ -15,8 +28,8 @@
     padding-left: map-get($grid-gutter, desktop);
 
     @include breakpoint(tablet) {
-      padding-right: map-get($grid-gutter, tablet);
-      padding-left: map-get($grid-gutter, tablet);
+      padding-right: map-get($grid-gutter, mobile);
+      padding-left: map-get($grid-gutter, mobile);
     }
 
     @include breakpoint(mobile) {
@@ -41,11 +54,6 @@
   }
 
   &__column {
-    display: inline-block;
-    vertical-align: top;
-    min-height: 1px;
-    font-size: $font-size;
-
     .grid.-pad & {
       padding-right: map-get($grid-column-gutter, desktop);
       padding-left: map-get($grid-column-gutter, desktop);
@@ -61,7 +69,7 @@
       }
     }
 
-    &.-no-pad {
+    &.-noPadding {
       padding-right: 0;
       padding-left: 0;
     }

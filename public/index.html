@@ -13,19 +13,26 @@
 </head>
 <body>
 
-  <div class="grid -pad">
+  <div class="grid -pad -horizontalCenterItems">
     <div class="grid__column -desktop-8">
-      <h1>strt-boilerplate</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quis maiores in earum nemo quia natus dolore repellendus sequi quaerat, sed, similique aliquam ratione sit exercitationem placeat odio autem beatae deleniti voluptatibus modi recusandae repudiandae quisquam. Aut dolorum, dolore sint.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi laudantium expedita rem recusandae quia architecto est, maxime, molestiae suscipit error obcaecati non, officiis quasi. Obcaecati consequatur provident voluptatibus vero sapiente.</p>
-    </div>
-    <div class="grid__column -desktop-12">
+      <h1 class="title -h1">strt-boilerplate</h1>
+      <p class="paragraph -preamble">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod similique illum quibusdam fuga, eaque sint perferendis consectetur eos non blanditiis.</p>
+      <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quis maiores in earum nemo quia natus dolore repellendus sequi quaerat, sed, similique aliquam ratione sit exercitationem placeat odio autem beatae deleniti voluptatibus modi recusandae repudiandae quisquam. Aut dolorum, dolore sint.</p>
+      <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi laudantium expedita rem recusandae quia architecto est, maxime, molestiae suscipit error obcaecati non, officiis quasi. Obcaecati consequatur provident voluptatibus vero sapiente.</p>
+
       <div class="grid__reset">
         <div class="grid -pad">
-          <div class="grid__column -desktop-12" style="background-color: #efefef; padding-top: 20px; padding-bottom: 20px;">
-            <input type="text" placeholder="Namn" class="input">
-            <input type="email" placeholder="E-postadress" class="input">
-            <button class="button">Skicka</button>
+          <div class="grid__column -desktop-6">
+            <input type="text" placeholder="Name" class="input">
+          </div>
+          <div class="grid__column -desktop-6">
+            <input type="email" placeholder="Email" class="input">
+          </div>
+          <div class="grid__column -desktop-12">
+            <textarea class="input" placeholder="Message"></textarea>
+          </div>
+          <div class="grid__column -desktop-6">
+            <button class="button">Submit</button>
           </div>
         </div>
       </div>

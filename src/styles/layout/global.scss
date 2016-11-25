@@ -14,14 +14,14 @@ body {
   min-width: 320px;
   cursor: default;
 
-  // Enables JS detection of breakpoints
+  // For JavaScript detection of CSS breakpoints
   &::after {
     display: none;
     content: 'desktop';
 
-    @each $breakpoint, $value in $breakpoints {
-      @include breakpoint($breakpoint) {
-        content: '#{$breakpoint}';
+    @each $key, $value in $breakpoints {
+      @include breakpoint($key) {
+        content: '#{$key}';
       }
     }
   }
