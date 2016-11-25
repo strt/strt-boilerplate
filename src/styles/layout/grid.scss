@@ -36,6 +36,21 @@
       padding-right: map-get($grid-gutter, mobile);
       padding-left: map-get($grid-gutter, mobile);
     }
+
+    & .grid__column {
+      padding-right: map-get($grid-column-gutter, desktop);
+      padding-left: map-get($grid-column-gutter, desktop);
+
+      @include breakpoint(tablet) {
+        padding-right: map-get($grid-column-gutter, tablet);
+        padding-left: map-get($grid-column-gutter, tablet);
+      }
+
+      @include breakpoint(mobile) {
+        padding-right: map-get($grid-column-gutter, mobile);
+        padding-left: map-get($grid-column-gutter, mobile);
+      }
+    }
   }
 
   &__reset {
@@ -54,24 +69,21 @@
   }
 
   &__column {
-    .grid.-pad & {
-      padding-right: map-get($grid-column-gutter, desktop);
-      padding-left: map-get($grid-column-gutter, desktop);
-
-      @include breakpoint(tablet) {
-        padding-right: map-get($grid-column-gutter, tablet);
-        padding-left: map-get($grid-column-gutter, tablet);
-      }
-
-      @include breakpoint(mobile) {
-        padding-right: map-get($grid-column-gutter, mobile);
-        padding-left: map-get($grid-column-gutter, mobile);
-      }
-    }
-
     &.-noPadding {
       padding-right: 0;
       padding-left: 0;
+    }
+
+    &.-alignTop {
+      align-self: flex-start;
+    }
+
+    &.-alignCenter {
+      align-self: center;
+    }
+
+    &.-alignBottom {
+      align-self: flex-end;
     }
 
     &.-desktop {
