@@ -2,8 +2,9 @@
 @mixin clearfix {
   &::before,
   &::after {
-    display: table;
     content: ' ';
+    display: table;
+    flex-basis: 0;
   }
 
   &::after {
