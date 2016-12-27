@@ -16,7 +16,7 @@
   "dependencies": {
     "babel-polyfill": "^6.20.0",
     "gulp": "github:gulpjs/gulp#4.0",
-    "strt-gulptasks": "^1.0.0"
+    "strt-gulptasks": "^2.0.0"
   },
   "devDependencies": {
     "eslint": "^3.12.0",
@@ -27,5 +27,10 @@
     "postcss": "^5.2.6",
     "stylelint": "^7.6.0",
     "stylelint-config-strateg": "^1.0.13"
+  },
+  "scripts": {
+    "build": "docker build -t strt/xxx .",
+    "push": "docker push strt/xxx",
+    "delpoy": "npm run build && npm run push"
   }
 }
