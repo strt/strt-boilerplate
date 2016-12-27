@@ -29,8 +29,8 @@
     "stylelint-config-strateg": "^1.0.13"
   },
   "scripts": {
-    "build": "docker build -t strt/xxx .",
-    "push": "docker push strt/xxx",
-    "delpoy": "npm run build && npm run push"
+    "docker:build": "docker build -t strt/xxx .",
+    "docker:push": "docker push strt/xxx",
+    "docker:delpoy": "npm run docker:build && npm run docker:push"
   }
 }
