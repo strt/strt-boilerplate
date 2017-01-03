@@ -1,6 +1,7 @@
+/* eslint-disable */
 const gulp = require('gulp');
 const tasks = require('strt-gulptasks')({
-  dist: 'public/dist',
+  output: 'public/dist',
 });
 
 gulp.task('default', gulp.series(
