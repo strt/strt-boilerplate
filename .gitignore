@@ -4,11 +4,3 @@ node_modules
 *.orig
 .DS_Store
 .vagrant
-/public/storage
-/storage/*.key
-/vendor
-/.idea
-Homestead.json
-Homestead.yaml
-.env
-
