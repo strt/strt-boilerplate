@@ -1,6 +1,7 @@
 /* eslint-disable */
 const gulp = require('gulp');
 const tasks = require('strt-gulptasks')({
+  source: 'resources/assets',
   output: 'public/dist',
 });
 
