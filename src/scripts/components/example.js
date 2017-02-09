@@ -1,15 +1,15 @@
-import { device, events, cookie } from '../utils';
+import { viewport, events, cookie } from '../utils';
 
 const example = function example() {
-  // Get device example
-  console.log(device);
+  // Get viewport example
+  console.log(viewport);
 
   // Set cookie example
-  cookie.set('test', 'value', 1);
+  cookie.set('cookieName', 'cookieValue', 1);
 
   // Events subscription example
-  events.on('breakpointChange', (breakpoint) => {
-    console.log(breakpoint);
+  events.on('viewportUpdate', (data) => {
+    console.log(data);
   });
 };
 

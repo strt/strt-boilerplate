@@ -22,7 +22,7 @@ const viewport = {
 
     if (this.breakpoint !== newBreakpoint) {
       this.breakpoint = newBreakpoint;
-      events.emit('breakpointChange', this.breakpoint);
+      events.emit('viewportUpdate', this.breakpoint);
     }
   },
 };
