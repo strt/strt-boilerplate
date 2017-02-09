@@ -49,4 +49,8 @@ em {
   margin-bottom: 1em;
   font-size: 1.6rem;
   line-height: 1.5em;
+
+  &.-excerpt {
+    font-size: 2rem;
+  }
 }
