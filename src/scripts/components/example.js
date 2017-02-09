@@ -1,6 +1,4 @@
-import device from '../utils/device';
-import cookie from '../utils/cookie';
-import events from '../utils/events';
+import { device, events, cookie } from '../utils';
 
 const example = function example() {
   // Get device example
