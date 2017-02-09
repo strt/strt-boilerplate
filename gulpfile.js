@@ -1,7 +1,14 @@
 /* eslint-disable */
+
 const gulp = require('gulp');
 const tasks = require('strt-gulptasks')({
   output: 'public/dist',
+  browserSync: {
+    options: {
+      server: 'public',
+      files: ['public/*.html'],
+    }
+  }
 });
 
 gulp.task('default', gulp.series(
