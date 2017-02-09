@@ -1,5 +1,5 @@
 const cookie = {
-  set(name, value, time) {
+  set(name, value, time, domain) {
     let expires = '';
     if (time) {
       const date = new Date();
@@ -7,7 +7,7 @@ const cookie = {
       expires = `; expires=${date.toGMTString()}`;
     }
 
-    document.cookie = `${name}=${value + expires}; path=/`;
+    document.cookie = `${name}=${value + expires}; path=/; ${domain && `domain=${domain};`}`;
   },
 
   get(name) {
