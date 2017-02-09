@@ -14,23 +14,24 @@
     "type": "git"
   },
   "dependencies": {
-    "babel-polyfill": "^6.20.0",
-    "gulp": "github:gulpjs/gulp#4.0",
-    "strt-gulptasks": "^2.1.1"
+    "core-js": "^2.4.1",
+    "js-polyfills": "^0.1.31",
+    "reset-css": "^2.2.0",
+    "strt-gulptasks": "^2.2.2"
   },
   "devDependencies": {
-    "eslint": "^3.12.0",
-    "eslint-config-airbnb": "^13.0.0",
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^2.2.3",
-    "eslint-plugin-react": "^6.7.1",
-    "postcss": "^5.2.6",
-    "stylelint": "^7.7.1",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.9.0",
+    "postcss": "^5.2.12",
+    "stylelint": "^7.8.0",
     "stylelint-config-strateg": "^1.0.13"
   },
   "scripts": {
-    "docker:build": "docker build -t strt/xxx .",
-    "docker:push": "docker push strt/xxx",
+    "docker:build": "docker build -t strt/YOUR_REGISTRY_NAME .",
+    "docker:push": "docker push strt/YOUR_REGISTRY_NAME",
     "docker:delpoy": "npm run docker:build && npm run docker:push"
   }
 }
