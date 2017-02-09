@@ -1,6 +1,6 @@
 import events from './events';
 
-const device = {
+const viewport = {
   breakpoint: 'desktop',
   init() {
     this.bindEvents();
@@ -27,4 +27,4 @@ const device = {
   },
 };
 
-export default device.init();
+export default viewport.init();

@@ -1,6 +1,6 @@
 import cookie from './cookie';
-import device from './device';
+import viewport from './viewport';
 import events from './events';
 import easings from './easings';
 
-export { cookie, device, events, easings };
+export { cookie, viewport, events, easings };
