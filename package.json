@@ -1,8 +1,8 @@
 {
   "name": "strt-boilerplate",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "private": true,
-  "description": "A lightweight and simple starter kit for new projects.",
+  "description": "Simple & lightweight boilerplate",
   "author": {
     "name": "Strateg Marknadsföring AB ",
     "email": "development@strateg.se",
@@ -17,7 +17,7 @@
     "core-js": "^2.4.1",
     "js-polyfills": "^0.1.31",
     "reset-css": "^2.2.0",
-    "strt-gulptasks": "^2.2.2"
+    "strt-gulptasks": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^3.15.0",
@@ -32,6 +32,6 @@
   "scripts": {
     "docker:build": "docker build -t strt/YOUR_REGISTRY_NAME .",
     "docker:push": "docker push strt/YOUR_REGISTRY_NAME",
-    "docker:delpoy": "npm run docker:build && npm run docker:push"
+    "delpoy": "npm run docker:build && npm run docker:push"
   }
 }

@@ -3,11 +3,12 @@
 const gulp = require('gulp');
 const tasks = require('strt-gulptasks')({
   output: 'public/dist',
-  browserSync: {
-    options: {
-      server: 'public',
-      files: ['public/*.html'],
-    }
+  scripts: {
+    publicPath: 'localhost:3000/dist/scripts',
+  },
+  serve: {
+    server: 'public',
+    files: ['public/*.html'],
   }
 });
 
