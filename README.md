@@ -1,7 +1,7 @@
 <p align="center">
   <a href="http://www.strateg.se" target="_blank"><img src="http://www.strateg.se/images/18.a1e6bf01578783b6c19d43/1475494040088/strateg-logo.png" alt="Strateg Marknadsföring" width="250"></a>
   <br><br>
-  A simple &amp; lightweight boilerplate.<br> Uses Gulp, SASS, Webpack, Babel, BrowserSync and more.
+  Simple &amp; lightweight boilerplate
   <br><br>
 </p>
 
@@ -45,12 +45,11 @@ $ npm install gulpjs/gulp-cli -g
 
 ## Initialization 🚀
 1. Clone the repository and drop the files into a new directory.
-2. Run `npm install `
+2. Run `npm install ` or `yarn install`
 
 ## Usage ⚡️
-
 #### Options
-See [strt-gulpfile](https://github.com/strt/strt-gulpfile) for available options.
+See [strt-gulptasks](https://github.com/strt/strt-gulptasks) for available options.
 
 #### Build
 
