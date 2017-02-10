@@ -4,7 +4,7 @@ const gulp = require('gulp');
 const tasks = require('strt-gulptasks')({
   output: 'public/dist',
   scripts: {
-    publicPath: 'localhost:3000/dist/scripts',
+    publicPath: '/dist/scripts',
   },
   serve: {
     server: 'public',
