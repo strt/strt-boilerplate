@@ -1,8 +1,8 @@
 // Breakpoints
 $breakpoints: (
   desktop: 1200px,
-  tablet: 940px,
-  mobile: 520px
+  tablet: 960px,
+  mobile: 560px
 );
 
 // Tweakpoints
@@ -26,10 +26,9 @@ $grid-column-gutter: (
   mobile: 5px
 );
 
-// Typography
+// Fonts
 $font-family: Helvetica, Arial, sans-serif;
 $font-family-alt: Georgia, serif;
-$font-size: 10px;
 
 // Easings
 $easings: (
@@ -44,6 +43,8 @@ $colors: (
   white: #ffffff,
   gray900: #101010,
   gray600: #646464,
+  gray300: #b0b0b0,
+  gray200: #cccccc,
   gray100: #fefefe,
   orange: #ff5825,
   yellow: #ffcd00,

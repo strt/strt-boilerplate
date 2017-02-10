@@ -1,0 +1,13 @@
+.input {
+  @include reset-input;
+  padding: 11px 16px;
+  margin-bottom: 30px;
+  width: 100%;
+  border-radius: 6px;
+  border: solid 2px map-get($colors, gray200);
+  font-size: 1.6rem;
+
+  &:focus {
+    border-color: map-get($colors, gray300);
+  }
+}

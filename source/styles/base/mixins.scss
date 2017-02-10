@@ -95,4 +95,8 @@
   &:focus {
     outline: none;
   }
+
+  @at-root textarea#{&} {
+    resize: vertical;
+  }
 }

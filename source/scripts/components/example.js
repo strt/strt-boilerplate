@@ -1,6 +1,6 @@
 import { viewport, events, cookie } from '../utils';
 
-const example = function example() {
+function example() {
   // Get viewport example
   console.log(viewport);
 
@@ -11,6 +11,6 @@ const example = function example() {
   events.on('viewportUpdate', (data) => {
     console.log(data);
   });
-};
+}
 
 export default example();

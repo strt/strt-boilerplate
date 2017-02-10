@@ -3,11 +3,12 @@
 // ==========================
 html {
   font-family: $font-family;
-  font-size: $font-size;
+  font-size: 10px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
 
   & a {
     font-family: inherit;
