@@ -1,8 +1,11 @@
-import { viewport, events, cookie } from '../utils';
+import { viewport, events, cookie, url } from '../utils';
 
 function example() {
   // Get viewport example
   console.log(viewport);
+
+  // Get url params example
+  console.log(url.getParams());
 
   // Set cookie example
   cookie.set('cookieName', 'cookieValue', 1);
