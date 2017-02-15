@@ -6,6 +6,10 @@
 </p>
 
 ## Prerequisites ❗️
+
+#### Coding standards
+Only for internal organization. Check it out [here](https://github.com/strt/strt-docs).
+
 #### EditorConfig
 Get it [here](http://editorconfig.org/).
 
