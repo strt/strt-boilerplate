@@ -10,7 +10,7 @@
     "core-js": "^2.4.1",
     "js-polyfills": "^0.1.33",
     "reset-css": "^2.2.0",
-    "strt-gulptasks": "^3.0.2"
+    "strt-gulptasks": "^3.0.4"
   },
   "devDependencies": {
     "eslint": "^3.16.1",
