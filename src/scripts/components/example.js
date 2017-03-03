@@ -5,7 +5,7 @@ function example() {
   console.log(viewport);
 
   // Get url params example
-  console.log(url.getParams());
+  console.log('params', url.getParams());
 
   // Set cookie example
   cookie.set('cookieName', 'cookieValue', 1);

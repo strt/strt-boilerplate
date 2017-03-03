@@ -29,16 +29,6 @@
     "docker:push": "docker push strt/YOUR_REGISTRY_NAME",
     "delpoy": "npm run docker:build && npm run docker:push"
   },
-  "babel": {
-    "presets": [
-      [
-        "es2015",
-        {
-          "modules": false
-        }
-      ]
-    ]
-  },
   "stylelint": {
     "extends": "stylelint-config-strateg"
   },
