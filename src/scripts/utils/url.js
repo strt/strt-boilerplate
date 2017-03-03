@@ -6,7 +6,7 @@ const url = {
       .substring(1)
       .split('&')
       .map(i => i.split('='))
-      .reduce((obj, [key, value]) => (
+      .reduce((obj, [key, value = '']) => (
         Object.assign(obj, { [key]: decodeURIComponent(value) })
       ), {});
   },
