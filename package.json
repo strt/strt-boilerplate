@@ -24,12 +24,20 @@
     "stylelint-config-strateg": "^1.0.13"
   },
   "scripts": {
+    "postinstall": "mv .hooks/pre-commit .git/hooks/",
     "docker:build": "docker build -t strt/YOUR_REGISTRY_NAME .",
     "docker:push": "docker push strt/YOUR_REGISTRY_NAME",
     "delpoy": "npm run docker:build && npm run docker:push"
   },
   "babel": {
-    "presets": [["es2015", { "modules": false }]]
+    "presets": [
+      [
+        "es2015",
+        {
+          "modules": false
+        }
+      ]
+    ]
   },
   "stylelint": {
     "extends": "stylelint-config-strateg"

@@ -8,3 +8,5 @@ import './modernizr';
 
 // Components
 import './components/example';
+
+console.log()
