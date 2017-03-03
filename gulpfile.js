@@ -29,7 +29,6 @@ gulp.task('production', gulp.series(
     process.env.NODE_ENV = 'production';
     done();
   },
-  tasks.lint,
   tasks.clean,
   gulp.parallel(
     tasks.styles,
