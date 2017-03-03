@@ -7,6 +7,7 @@
   "main": "gulpfile.js",
   "author": "Strateg Marknadsföring AB",
   "dependencies": {
+    "axios": "^0.15.3",
     "core-js": "^2.4.1",
     "js-polyfills": "^0.1.33",
     "reset-css": "^2.2.0",
@@ -28,14 +29,7 @@
     "delpoy": "npm run docker:build && npm run docker:push"
   },
   "babel": {
-    "presets": [
-      [
-        "es2015",
-        {
-          "modules": false
-        }
-      ]
-    ]
+    "presets": [["es2015", { "modules": false }]]
   },
   "stylelint": {
     "extends": "stylelint-config-strateg"
