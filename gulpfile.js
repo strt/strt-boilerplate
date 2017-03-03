@@ -2,6 +2,7 @@
 
 const gulp = require('gulp');
 const tasks = require('strt-gulptasks')({
+  source: 'src',
   output: 'public/dist',
   scripts: {
     publicPath: '/dist/scripts',
