@@ -24,7 +24,7 @@
     "stylelint-config-strateg": "^1.0.13"
   },
   "scripts": {
-    "postinstall": "mv .hooks/pre-commit .git/hooks/",
+    "postinstall": "cp .hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit",
     "docker:build": "docker build -t strt/YOUR_REGISTRY_NAME .",
     "docker:push": "docker push strt/YOUR_REGISTRY_NAME",
     "delpoy": "npm run docker:build && npm run docker:push"
