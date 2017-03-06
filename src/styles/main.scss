@@ -1,4 +1,4 @@
-// NPM modules
+// Vendor
 @import 'reset-css/_reset';
 
 // Config
@@ -8,13 +8,10 @@
 @import 'base/mixins';
 @import 'base/typography';
 @import 'base/animation';
-
-// Layout
-@import 'layout/global';
-@import 'layout/grid';
+@import 'base/global';
+@import 'base/grid';
 
 // Components
 @import 'components/button';
 @import 'components/input';
 @import 'components/icon';
-@import 'components/misc';
