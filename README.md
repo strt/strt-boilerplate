@@ -1,62 +1,66 @@
-<p align="center">
-  <a href="http://www.strateg.se" target="_blank"><img src="http://www.strateg.se/images/18.a1e6bf01578783b6c19d43/1475494040088/strateg-logo.png" alt="Strateg Marknadsföring" width="250"></a>
-  <br><br>
-  Simple &amp; lightweight boilerplate
-  <br><br>
-</p>
+<h1 align="center">
+  <br>
+  <a href="https://github.com/strt" target="_blank"><img src="http://www.strateg.se/images/18.a1e6bf01578783b6c19d43/1475494040088/strateg-logo.png" alt="" width="260"></a>
+  <br>
+  <br>
+</h1>
 
-## Prerequisites ❗️
+> Minimalistic frontend boilerplate 
 
-#### Coding standards
-Only for internal organization. Check it out [here](https://github.com/strt/strt-docs).
+## Install 🚀
+### Requirements
+Node (preferably install with [nvm](https://github.com/creationix/nvm) or get it [here](https://nodejs.org))
 
-#### EditorConfig
-Get it [here](http://editorconfig.org/).
-
-#### Node.js
-Preferably install with [NVM](https://github.com/creationix/nvm) or get it [here](https://nodejs.org). 
-
-#### Eslint
-Install the eslint plugin for your editor. Ex for Sublime, install [SublimeLinter](https://packagecontrol.io/packages/SublimeLinter) and [SublimeLinter-contrib-eslint](https://packagecontrol.io/packages/SublimeLinter-contrib-eslint) from Package Control.
-
-#### Stylelint
-Install the eslint plugin for your editor. Ex for Sublime, install [SublimeLinter](https://packagecontrol.io/packages/SublimeLinter) and [SublimeLinter-contrib-stylelint](https://packagecontrol.io/packages/SublimeLinter-contrib-stylelint) from Package Control.
-
-#### Gulp
-```
-$ npm install gulpjs/gulp-cli -g
+Gulp 
+``` bash
+$ npm install -g gulpjs/gulp-cli
 ```
 
-## Features 🔥
-#### CSS/SASS
-+ CSS autoprefixer
-+ CSS reset
-+ Custom CSS grid
-+ Custom breakpoint mixin
+### Clone this repository
+``` bash
+$ git clone --depth 1 git@github.com:strt/strt-boilerplate.git && cd strt-boilerplate && rm -rf .git
+```
 
-#### JavaScript
-+ ES2015 support with Babel
+### Initialize
+``` bash
+$ yarn install
+```
+
+## Features ✅
+### CSS/SASS
++ Autoprefixer
++ Reset CSS
++ BEM grid
++ Breakpoint mixin
+
+### JavaScript
++ ES6 support with Babel
 + JavaScript modules
-+ Cookie, device and event JavaScript helpers
++ Small and useful helper functions
 + JavaScript detection of CSS breakpoints
-+ Custom build of Modernizr for feature detection
++ Eslint (Airbnb preset)
++ Modernizr
 
-#### Miscellaneous
+### Miscellaneous
++ Live reloading with Browsersync
 + Image optimization with imagemin
-+ Live reloading with Browser sync
 + SVG icon bundling
 + ScotchBox ready
 
-## Initialization 🚀
-1. Clone the repository and drop the files into a new directory.
-2. Run `npm install ` or `yarn install`
+## Usage 🔥
+### Coding standard
+Find it [here](https://github.com/strt/strt-docs)
 
-## Usage ⚡️
-#### Options
-See [strt-gulptasks](https://github.com/strt/strt-gulptasks) for available options.
+### Configuration
+Find it [here](https://github.com/strt/strt-gulptasks)
 
-#### Build
-
-```
+### Build
+Development 
+``` bash
 $ gulp
+```
+
+Production
+``` bash
+$ gulp production
 ```
