@@ -11,10 +11,10 @@
     "core-js": "^2.4.1",
     "js-polyfills": "^0.1.33",
     "reset-css": "^2.2.0",
-    "strt-gulptasks": "^3.0.4"
+    "strt-gulptasks": "^3.0.6"
   },
   "devDependencies": {
-    "eslint": "^3.16.1",
+    "eslint": "^3.17.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",

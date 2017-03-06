@@ -1,6 +1,6 @@
-<h1 align="center">
-  <br>
+<h1>
   <a href="https://github.com/strt" target="_blank"><img src="http://www.strateg.se/images/18.a1e6bf01578783b6c19d43/1475494040088/strateg-logo.png" alt="" width="260"></a>
+  <br>
   <br>
   <br>
 </h1>
