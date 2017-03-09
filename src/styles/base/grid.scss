@@ -10,19 +10,6 @@
     max-width: none;
   }
 
-  &.-centerItems {
-    align-items: center;
-    justify-content: center;
-  }
-
-  &.-verticalCenterItems {
-    align-items: center;
-  }
-
-  &.-horizontalCenterItems {
-    justify-content: center;
-  }
-
   &.-pad {
     padding-right: map-get($grid-gutter, desktop);
     padding-left: map-get($grid-gutter, desktop);
@@ -69,21 +56,9 @@
   }
 
   &__column {
-    &.-noPadding {
+    &.-noPad {
       padding-right: 0;
       padding-left: 0;
-    }
-
-    &.-alignTop {
-      align-self: flex-start;
-    }
-
-    &.-alignCenter {
-      align-self: center;
-    }
-
-    &.-alignBottom {
-      align-self: flex-end;
     }
 
     &.-desktop {

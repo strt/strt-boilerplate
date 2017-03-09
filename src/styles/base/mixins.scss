@@ -1,4 +1,40 @@
-// Clearfix
+@mixin reset-button {
+  display: inline-block;
+  vertical-align: top;
+  outline: none;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  font-family: $font-family;
+  line-height: 1em;
+  text-decoration: none;
+  text-align: center;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin reset-input {
+  border: 0;
+  border-radius: 0;
+  font-family: $font-family;
+  line-height: 1em;
+  appearance: none;
+  background: transparent;
+
+  &:focus {
+    outline: none;
+  }
+
+  @at-root textarea#{&} {
+    resize: vertical;
+  }
+}
+
 @mixin clearfix {
   &::before,
   &::after {
@@ -12,7 +48,6 @@
   }
 }
 
-// Breakpoint
 @mixin breakpoint($value) {
   $bp: nth($value, 1);
   $dir: if(length($value) > 1, nth($value, 2), down);
@@ -38,7 +73,6 @@
   }
 }
 
-// Grid column
 @mixin column($value: $grid-columns) {
   @extend .grid__column;
   $val: nth($value, 1);
@@ -55,48 +89,8 @@
   }
 }
 
-// Grid column offset
 @mixin column-offset($value: 1) {
   $val: nth($value, 1);
   $columnWidth: if(length($value) > 2, 100 / nth($value, 3), $grid-columns-width);
   margin-left: #{$columnWidth * $val * 1%};
-}
-
-// Reset input
-@mixin reset-button {
-  display: inline-block;
-  vertical-align: top;
-  outline: none;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  font-family: $font-family;
-  line-height: 1em;
-  text-decoration: none;
-  text-align: center;
-  appearance: none;
-  background: transparent;
-  cursor: pointer;
-
-  &:focus {
-    outline: none;
-  }
-}
-
-// Reset input
-@mixin reset-input {
-  border: 0;
-  border-radius: 0;
-  font-family: $font-family;
-  line-height: 1em;
-  appearance: none;
-  background: transparent;
-
-  &:focus {
-    outline: none;
-  }
-
-  @at-root textarea#{&} {
-    resize: vertical;
-  }
 }

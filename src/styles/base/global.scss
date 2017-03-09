@@ -14,7 +14,6 @@ body {
   min-width: 320px;
   cursor: default;
 
-  // For JavaScript detection of CSS breakpoints
   &::after {
     display: none;
     content: 'desktop';
