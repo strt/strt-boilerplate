@@ -3,8 +3,5 @@
 // import 'core-js/object';
 // import 'js-polyfills/html';
 
-// Modernizr
-import './modernizr';
-
 // Components
 import './components/example';
