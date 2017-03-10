@@ -17,12 +17,24 @@ Gulp
 $ npm install -g gulpjs/gulp-cli
 ```
 
-### Clone this repository
+### Install with CLI
+CLI helper
+``` bash
+$ npm i -g strt-create-project
+```
+
+Usage 
+``` bash
+$ strt-create-project
+```
+
+### Manual install
+#### Clone this repository
 ``` bash
 $ git clone --depth 1 git@github.com:strt/strt-boilerplate.git && cd strt-boilerplate && rm -rf .git
 ```
 
-### Initialize
+#### Initialize
 ``` bash
 $ yarn install
 ```
