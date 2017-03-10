@@ -29,12 +29,12 @@ $ strt-create-project
 ```
 
 ### Manual install
-#### Clone this repository
+Clone this repository
 ``` bash
-$ git clone --depth 1 git@github.com:strt/strt-boilerplate.git && cd strt-boilerplate && rm -rf .git
+$ git clone --depth 1 git@github.com:strt/strt-boilerplate.git {project-name} && cd {project-name} && rm -rf .git
 ```
 
-#### Initialize
+Install packages
 ``` bash
 $ yarn install
 ```
@@ -60,7 +60,7 @@ $ yarn install
 + SVG icon bundling
 + ScotchBox ready
 
-## Usage 🔥
+## Usage ✨
 ### Coding standard
 Find it [here](https://github.com/strt/strt-docs)
 
