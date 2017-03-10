@@ -11,15 +11,15 @@
     "core-js": "^2.4.1",
     "js-polyfills": "^0.1.33",
     "reset-css": "^2.2.0",
-    "strt-gulptasks": "^3.0.6"
+    "strt-gulptasks": "^3.0.8"
   },
   "devDependencies": {
-    "eslint": "^3.17.0",
+    "eslint": "^3.17.1",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.0",
-    "postcss": "^5.2.15",
+    "postcss": "^5.2.16",
     "stylelint": "^7.9.0",
     "stylelint-config-strateg": "^1.0.13"
   },
