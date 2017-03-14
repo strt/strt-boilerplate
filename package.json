@@ -1,17 +1,17 @@
 {
   "name": "strt-boilerplate",
   "version": "1.1.0",
-  "private": true,
   "description": "Simple & lightweight boilerplate",
+  "private": true,
   "license": "MIT",
-  "main": "gulpfile.js",
   "author": "Strateg Marknadsföring AB",
   "dependencies": {
     "axios": "^0.15.3",
     "core-js": "^2.4.1",
     "js-polyfills": "^0.1.33",
     "reset-css": "^2.2.0",
-    "strt-gulptasks": "^3.0.8"
+    "strt-gulptasks": "^3.0.8",
+    "svgxuse": "^1.2.3"
   },
   "devDependencies": {
     "eslint": "^3.17.1",

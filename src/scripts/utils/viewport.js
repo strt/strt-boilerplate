@@ -14,8 +14,6 @@ const viewport = {
   },
 
   setBreakpoint() {
-    if (!window.getComputedStyle) return;
-
     const newBreakpoint = window.getComputedStyle(document.body, ':after')
       .getPropertyValue('content')
       .replace(/['"]+/g, '');
