@@ -21,9 +21,10 @@
     "eslint-plugin-react": "^6.10.0",
     "postcss": "^5.2.16",
     "stylelint": "^7.9.0",
-    "stylelint-config-strateg": "^1.0.13"
+    "stylelint-config-strateg": "^1.1.0"
   },
   "scripts": {
+    "test": "eslint \"src/**/*.js\" && stylelint \"src/**/*.scss\"",
     "postinstall": "cp .hooks/* .git/hooks && chmod +x .git/hooks/*",
     "docker:build": "docker build -t strt/YOUR_REGISTRY_NAME .",
     "docker:push": "docker push strt/YOUR_REGISTRY_NAME",
