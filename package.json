@@ -2,7 +2,6 @@
   "name": "strt-boilerplate",
   "version": "1.1.0",
   "description": "Simple & lightweight boilerplate",
-  "private": true,
   "license": "MIT",
   "author": "Strateg Marknadsföring <development@strateg.se> (http://strateg.se)",
   "dependencies": {
