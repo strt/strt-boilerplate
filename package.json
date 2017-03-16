@@ -4,7 +4,7 @@
   "description": "Simple & lightweight boilerplate",
   "private": true,
   "license": "MIT",
-  "author": "Strateg Marknadsföring AB",
+  "author": "Strateg Marknadsföring <development@strateg.se> (http://strateg.se)",
   "dependencies": {
     "axios": "^0.15.3",
     "core-js": "^2.4.1",
