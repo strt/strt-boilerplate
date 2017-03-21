@@ -11,48 +11,15 @@
   }
 
   &.-pad {
-    padding-right: map-get($grid-gutter, desktop);
-    padding-left: map-get($grid-gutter, desktop);
-
-    @include breakpoint(tablet) {
-      padding-right: map-get($grid-gutter, mobile);
-      padding-left: map-get($grid-gutter, mobile);
-    }
-
-    @include breakpoint(mobile) {
-      padding-right: map-get($grid-gutter, mobile);
-      padding-left: map-get($grid-gutter, mobile);
-    }
+    @include grid-gutter($grid-gutter);
 
     & .grid__column {
-      padding-right: map-get($grid-column-gutter, desktop);
-      padding-left: map-get($grid-column-gutter, desktop);
-
-      @include breakpoint(tablet) {
-        padding-right: map-get($grid-column-gutter, tablet);
-        padding-left: map-get($grid-column-gutter, tablet);
-      }
-
-      @include breakpoint(mobile) {
-        padding-right: map-get($grid-column-gutter, mobile);
-        padding-left: map-get($grid-column-gutter, mobile);
-      }
+      @include grid-gutter($grid-column-gutter);
     }
   }
 
   &__reset {
-    margin-right: -(map-get($grid-gutter, desktop) + map-get($grid-column-gutter, desktop));
-    margin-left: -(map-get($grid-gutter, desktop) + map-get($grid-column-gutter, desktop));
-
-    @include breakpoint(tablet) {
-      margin-right: -(map-get($grid-gutter, tablet) + map-get($grid-column-gutter, tablet));
-      margin-left: -(map-get($grid-gutter, tablet) + map-get($grid-column-gutter, tablet));
-    }
-
-    @include breakpoint(mobile) {
-      margin-right: -(map-get($grid-gutter, mobile) + map-get($grid-column-gutter, mobile));
-      margin-left: -(map-get($grid-gutter, mobile) + map-get($grid-column-gutter, mobile));
-    }
+    @include grid-reset-gutter;
   }
 
   &__column {
@@ -68,7 +35,6 @@
         }
       }
 
-      // Set default width tablet
       @include breakpoint(tablet) {
         @for $i from 1 through $grid-columns {
           &-#{$i} {
@@ -87,7 +53,6 @@
         }
       }
 
-      // Set default width mobile
       @include breakpoint(mobile) {
         @for $i from 1 through $grid-columns {
           &-#{$i} {

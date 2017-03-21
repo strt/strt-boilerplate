@@ -9,18 +9,18 @@
     "core-js": "^2.4.1",
     "js-polyfills": "^0.1.33",
     "reset-css": "^2.2.0",
-    "strt-gulptasks": "^4.0.0",
+    "strt-gulptasks": "^4.0.1",
     "svgxuse": "^1.2.3"
   },
   "devDependencies": {
-    "eslint": "^3.17.1",
+    "eslint": "^3.18.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.10.0",
+    "eslint-plugin-react": "^6.10.3",
     "postcss": "^5.2.16",
     "stylelint": "^7.9.0",
-    "stylelint-config-strateg": "^1.1.0"
+    "stylelint-config-strateg": "^1.2.1"
   },
   "scripts": {
     "test": "eslint \"src/**/*.js\" && stylelint \"src/**/*.scss\"",
