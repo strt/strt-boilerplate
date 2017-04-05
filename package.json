@@ -10,7 +10,7 @@
     "core-js": "^2.4.1",
     "js-polyfills": "^0.1.33",
     "reset-css": "^2.2.0",
-    "strt-gulptasks": "^4.0.3",
+    "strt-gulptasks": "^4.0.4",
     "svgxuse": "^1.2.3"
   },
   "devDependencies": {
