@@ -69,7 +69,7 @@
     }
   }
   @else {
-    @warn 'Could not find point in $tweakpoints or $breakpoints.';
+    @warn 'Could not find #{value} in $tweakpoints or $breakpoints.';
   }
 }
 
@@ -85,7 +85,7 @@
     width: $val;
   }
   @else {
-    @warn 'Invalid value passed to grid-column mixin.';
+    @warn 'The value "#{$value}" passed to grid-column mixin is invalid.';
   }
 }
 
