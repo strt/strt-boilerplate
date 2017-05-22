@@ -18,7 +18,7 @@ const cookie = {
       return parts.pop().split(';').shift();
     }
 
-    return undefined;
+    return null;
   },
 
   delete(name) {
