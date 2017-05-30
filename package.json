@@ -10,22 +10,24 @@
     "core-js": "^2.4.1",
     "js-polyfills": "^0.1.33",
     "reset-css": "^2.2.0",
-    "strt-gulptasks": "^4.3.1",
+    "strt-gulptasks": "^4.4.0",
     "svgxuse": "^1.2.4"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
-    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-import": "^2.3.0",
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.0.1",
+    "husky": "^0.13.4",
     "postcss": "^6.0.1",
     "stylelint": "^7.10.1",
     "stylelint-config-strateg": "^1.2.1"
   },
   "scripts": {
     "test": "eslint \"src/**/*.js\" && stylelint \"src/**/*.scss\"",
+    "precommit": "npm test",
     "postinstall": "cp .hooks/* .git/hooks && chmod +x .git/hooks/*",
     "docker:build": "docker build -t strt/YOUR_REGISTRY .",
     "docker:push": "docker push strt/YOUR_REGISTRY",
