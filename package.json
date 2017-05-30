@@ -28,7 +28,6 @@
   "scripts": {
     "test": "eslint \"src/**/*.js\" && stylelint \"src/**/*.scss\"",
     "precommit": "npm test",
-    "postinstall": "cp .hooks/* .git/hooks && chmod +x .git/hooks/*",
     "docker:build": "docker build -t strt/YOUR_REGISTRY .",
     "docker:push": "docker push strt/YOUR_REGISTRY",
     "deploy": "npm run docker:build && npm run docker:push"
