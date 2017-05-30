@@ -23,10 +23,10 @@
     "husky": "^0.13.4",
     "postcss": "^6.0.1",
     "stylelint": "^7.10.1",
-    "stylelint-config-strateg": "^1.2.1"
+    "stylelint-config-strateg": "^1.2.2"
   },
   "scripts": {
-    "test": "eslint \"src/**/*.js\" && stylelint \"src/**/*.scss\"",
+    "test": "eslint --fix src --ext .js && stylelint \"src/**/*.scss\" --fix",
     "precommit": "npm test",
     "docker:build": "docker build -t strt/YOUR_REGISTRY .",
     "docker:push": "docker push strt/YOUR_REGISTRY",
