@@ -25,4 +25,4 @@ const viewport = {
   },
 };
 
-export default viewport.init()
+export default viewport.init();

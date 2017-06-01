@@ -9,6 +9,7 @@
   color: map-get($colors, white);
   background: map-get($colors, blue);
   transition: all 200ms ease;
+
   &:focus,
   &:hover {
     background: darken(map-get($colors, blue), 4%);
