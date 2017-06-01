@@ -1,17 +1,16 @@
 import events from './events';
 
-const viewport = {
-  breakpoint: 'desktop',
-  init() {
+class Viewport {
+  breakpoint = 'desktop'
+
+  constructor() {
     this.bindEvents();
     this.setBreakpoint();
-
-    return this.breakpoint;
-  },
+  }
 
   bindEvents() {
     window.addEventListener('resize', this.setBreakpoint.bind(this));
-  },
+  }
 
   setBreakpoint() {
     const newBreakpoint = window.getComputedStyle(document.body, ':after')
@@ -20,9 +19,9 @@ const viewport = {
 
     if (this.breakpoint !== newBreakpoint) {
       this.breakpoint = newBreakpoint;
-      events.emit('viewportUpdate', this.breakpoint);
+      events.emit('breakpoint', this.breakpoint);
     }
-  },
-};
+  }
+}
 
-export default viewport.init();
+export default new Viewport();

@@ -1,18 +1,18 @@
-import { viewport, events, cookie, url } from '../utils';
+import { viewport, events, Cookie } from '../utils';
 
 function example() {
   // Get viewport example
-  console.log(viewport);
-
-  // Get url params example
-  console.log('params', url.getParams());
+  console.log('🖥', viewport.breakpoint);
 
   // Set cookie example
-  cookie.set('cookieName', 'cookieValue', 1);
+  Cookie.set('cookie', 'This is a cookie', 1);
+
+  // Get cookie example
+  console.log('🍪', Cookie.get('cookie'));
 
   // Events subscription example
-  events.on('viewportUpdate', (data) => {
-    console.log(data);
+  events.on('breakpoint', (bp) => {
+    console.log('🖥', bp);
   });
 }
 

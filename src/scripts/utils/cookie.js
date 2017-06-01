@@ -1,5 +1,5 @@
-const cookie = {
-  set(name, value, time, domain) {
+class Cookie {
+  static set(name, value, time, domain) {
     let expires = '';
     if (time) {
       const date = new Date();
@@ -8,9 +8,9 @@ const cookie = {
     }
 
     document.cookie = `${name}=${value + expires}; path=/; ${domain && `domain=${domain};`}`;
-  },
+  }
 
-  get(name) {
+  static get(name) {
     const value = `; ${document.cookie}`;
     const parts = value.split(`; ${name}=`);
 
@@ -19,11 +19,11 @@ const cookie = {
     }
 
     return null;
-  },
+  }
 
-  delete(name) {
+  static delete(name) {
     this.set(name, '', -1);
-  },
-};
+  }
+}
 
-export default cookie;
+export default Cookie;
