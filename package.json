@@ -9,6 +9,7 @@
     "axios": "^0.16.1",
     "core-js": "^2.4.1",
     "js-polyfills": "^0.1.33",
+    "lint-staged": "^3.5.1",
     "reset-css": "^2.2.0",
     "strt-gulptasks": "^4.4.0",
     "svgxuse": "^1.2.4"
@@ -35,8 +36,14 @@
     "deploy": "npm run docker:build && npm run docker:push"
   },
   "lint-staged": {
-    "*.js": ["eslint --fix", "git add"],
-    "*.scss": ["stylelint --fix", "git add"]
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.scss": [
+      "stylelint --fix",
+      "git add"
+    ]
   },
   "stylelint": {
     "extends": "stylelint-config-strateg"
