@@ -26,11 +26,17 @@
     "stylelint-config-strateg": "^1.2.2"
   },
   "scripts": {
-    "test": "eslint --fix src --ext .js && stylelint \"src/**/*.scss\" --fix",
-    "precommit": "npm test",
+    "precommit": "lint-staged; exit 0",
+    "test": "npm run lint:scripts && npm run lint:styles",
+    "lint:scripts": "eslint --fix src --ext .js",
+    "lint:styles": "stylelint \"src/**/*.scss\" --fix",
     "docker:build": "docker build -t strt/YOUR_REGISTRY .",
     "docker:push": "docker push strt/YOUR_REGISTRY",
     "deploy": "npm run docker:build && npm run docker:push"
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix",
+    "*.scss": "stylelint --fix"
   },
   "stylelint": {
     "extends": "stylelint-config-strateg"
