@@ -50,7 +50,7 @@
 
 @mixin breakpoint($value) {
   $bp: nth($value, 1);
-  $dir: if(length($value) > 1, nth($value, 2), down);
+  $dir: if(length($value) > 1, nth($value, 2), up);
   $media-query: if($dir == 'down', max-width, min-width);
 
   @if type-of($bp) == 'number' and unit($bp) == 'px' {
@@ -107,6 +107,16 @@
   @include breakpoint(mobile) {
     padding-right: map-get($map, mobile);
     padding-left: map-get($map, mobile);
+  }
+}
+
+@mixin column-generate($fill: false) {
+  @for $i from 1 through $grid-columns {
+    $width: if($fill, 100%, #{$i * $grid-columns-width * 1%});
+
+    &-#{$i} {
+      width: $width;
+    }
   }
 }
 

@@ -1,10 +1,20 @@
 .grid {
   display: flex;
   flex-flow: row wrap;
+  align-items: flex-start;
   width: $grid-width;
   max-width: $grid-max-width;
   margin-right: auto;
   margin-left: auto;
+
+  &.-center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.-stretch {
+    align-items: stretch;
+  }
 
   &.-fluid {
     max-width: none;
@@ -23,52 +33,22 @@
   }
 
   &__column {
+    @include column-generate(true);
+
     &.-noPad {
       padding-right: 0;
       padding-left: 0;
     }
 
     &.-desktop {
-      @for $i from 1 through $grid-columns {
-        &-#{$i} {
-          width: #{$i * $grid-columns-width * 1%};
-        }
-      }
-
-      @include breakpoint(tablet) {
-        @for $i from 1 through $grid-columns {
-          &-#{$i} {
-            width: 100%;
-          }
-        }
+      @include breakpoint(desktop) {
+        @include column-generate;
       }
     }
 
     &.-tablet {
       @include breakpoint(tablet) {
-        @for $i from 1 through $grid-columns {
-          &-#{$i} {
-            width: #{$i * $grid-columns-width * 1%};
-          }
-        }
-      }
-
-      @include breakpoint(mobile) {
-        @for $i from 1 through $grid-columns {
-          &-#{$i} {
-            width: 100%;
-          }
-        }
-      }
-    }
-
-    &.-mobile {
-      @include breakpoint(mobile) {
-        @for $i from 1 through $grid-columns {
-          &-#{$i} {
-            width: #{$i * $grid-columns-width * 1%};
-          }
-        }
+        @include column-generate;
       }
     }
   }
