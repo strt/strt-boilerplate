@@ -6,11 +6,11 @@
   "license": "MIT",
   "author": "Strateg Marknadsföring <development@strateg.se> (http://strateg.se)",
   "dependencies": {
-    "axios": "^0.16.1",
+    "axios": "^0.16.2",
     "core-js": "^2.4.1",
     "js-polyfills": "^0.1.33",
     "reset-css": "^2.2.0",
-    "strt-gulptasks": "^4.4.0",
+    "strt-gulptasks": "^4.4.3",
     "svgxuse": "^1.2.4"
   },
   "devDependencies": {
@@ -21,7 +21,7 @@
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.0.1",
     "husky": "^0.13.4",
-    "lint-staged": "^3.5.1",
+    "lint-staged": "^3.6.0",
     "postcss": "^6.0.1",
     "stylelint": "^7.10.1",
     "stylelint-config-strateg": "^1.2.2"
