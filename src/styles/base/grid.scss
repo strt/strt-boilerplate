@@ -40,19 +40,11 @@
       padding-left: 0;
     }
 
-    &.-mobile {
-      @include column-generate;
-    }
-
-    &.-tablet {
-      @include breakpoint(tablet) {
-        @include column-generate;
-      }
-    }
-
-    &.-desktop {
-      @include breakpoint(desktop) {
-        @include column-generate;
+    @each $key, $value in $breakpoints {
+      &.-#{$key} {
+        @include breakpoint($key) {
+          @include column-generate;
+        }
       }
     }
   }
