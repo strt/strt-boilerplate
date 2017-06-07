@@ -74,9 +74,10 @@
 }
 
 @mixin column($value: $grid-columns) {
-  @extend .grid__column;
   $val: nth($value, 1);
   $columnWidth: if(length($value) > 2, 100 / nth($value, 3), $grid-columns-width);
+
+  @extend .grid__column;
 
   @if unitless($val) {
     width: #{$columnWidth * $val * 1%};

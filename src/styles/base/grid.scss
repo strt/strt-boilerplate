@@ -40,14 +40,18 @@
       padding-left: 0;
     }
 
-    &.-desktop {
-      @include breakpoint(desktop) {
-        @include column-generate;
-      }
+    &.-mobile {
+      @include column-generate;
     }
 
     &.-tablet {
       @include breakpoint(tablet) {
+        @include column-generate;
+      }
+    }
+
+    &.-desktop {
+      @include breakpoint(desktop) {
         @include column-generate;
       }
     }
