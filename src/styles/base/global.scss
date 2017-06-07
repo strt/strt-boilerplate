@@ -16,7 +16,6 @@ body {
 
   &::after {
     display: none;
-    content: 'mobile';
 
     @each $key, $value in $breakpoints {
       @include breakpoint($key) {
