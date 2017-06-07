@@ -10,7 +10,6 @@
     "core-js": "^2.4.1",
     "js-polyfills": "^0.1.33",
     "reset-css": "^2.2.0",
-    "strt-gulptasks": "^4.4.3",
     "svgxuse": "^1.2.4"
   },
   "devDependencies": {
@@ -23,6 +22,7 @@
     "husky": "^0.13.4",
     "lint-staged": "^3.6.0",
     "postcss": "^6.0.1",
+    "strt-gulptasks": "^4.4.3",
     "stylelint": "^7.10.1",
     "stylelint-config-strateg": "^1.2.2"
   },
