@@ -33,7 +33,7 @@
   }
 
   &__column {
-    @include column-generate(true);
+    width: 100%;
 
     &.-noPad {
       padding-right: 0;

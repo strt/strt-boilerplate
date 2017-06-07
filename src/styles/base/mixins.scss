@@ -110,12 +110,10 @@
   }
 }
 
-@mixin column-generate($fill: false) {
+@mixin column-generate {
   @for $i from 1 through $grid-columns {
-    $width: if($fill, 100%, #{$i * $grid-columns-width * 1%});
-
     &-#{$i} {
-      width: $width;
+      width: #{$i * $grid-columns-width * 1%};
     }
   }
 }
