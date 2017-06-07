@@ -27,13 +27,15 @@
     "stylelint-config-strateg": "^1.2.2"
   },
   "scripts": {
-    "precommit": "lint-staged",
     "test": "npm run lint:scripts && npm run lint:styles",
+    "dev": "gulp",
+    "build": "gulp production",
+    "deploy": "npm run docker:build && npm run docker:push",
+    "precommit": "lint-staged",
     "lint:scripts": "eslint src --ext .js --fix",
     "lint:styles": "stylelint \"src/**/*.scss\" --fix",
     "docker:build": "docker build -t strt/YOUR_REGISTRY .",
-    "docker:push": "docker push strt/YOUR_REGISTRY",
-    "deploy": "npm run docker:build && npm run docker:push"
+    "docker:push": "docker push strt/YOUR_REGISTRY"
   },
   "lint-staged": {
     "*.js": [
