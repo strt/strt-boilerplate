@@ -6,74 +6,67 @@
   <br>
 </h1>
 
-> Minimalistic frontend boilerplate 
+> The Strateg front-end boilerplate 
 
-## Install 🚀
-### Requirements
-Node (preferably install with [nvm](https://github.com/creationix/nvm) or get it [here](https://nodejs.org))
+## Setup 🚀
+### Prerequisites
+- [Node](https://nodejs.org)
+  - Preferably install with [nvm](https://github.com/creationix/nvm)
+- [Gulp 4](https://github.com/gulpjs/gulp)
+  - `$ npm install -g gulp-cli`
 
-Gulp 
-``` bash
-$ npm install -g gulpjs/gulp-cli
+### Install
+#### With CLI tool
+Install
 ```
-
-### Install with CLI
-CLI helper
-``` bash
 $ npm i -g strt-create-project
 ```
 
 Usage 
-``` bash
-$ strt-create-project
+```
+$ strt-create-project <project-name>
 ```
 
-### Manual install
-Clone this repository
-``` bash
-$ git clone --depth 1 git@github.com:strt/strt-boilerplate.git {project-name} && cd {project-name} && rm -rf .git
+#### Manual
+Clone the repository
+```
+$ git clone --depth 1 git@github.com:strt/strt-boilerplate.git <project-name> && cd <project-name> && rm -rf .git
 ```
 
 Install packages
-``` bash
+```
 $ yarn install
 ```
 
 ## Features ✅
-### CSS/SASS
-+ Autoprefixer
-+ Reset CSS
-+ BEM grid
-+ Breakpoint mixin
+#### CSS/SASS
+- [Autoprefixer](https://github.com/postcss/autoprefixer)
+- Customizable BEM grid
+- Breakpoint mixin
 
-### JavaScript
-+ ES6 support with Babel
-+ JavaScript modules
-+ Small and useful helper functions
-+ JavaScript detection of CSS breakpoints
-+ Eslint (Airbnb preset)
-+ Modernizr
+#### JavaScript
+- ES6 with [Babel](https://github.com/babel/babel)
+- [Eslint](https://github.com/eslint/eslint) with the [Airbnb preset](https://github.com/airbnb/javascript)
+- Detection of CSS breakpoints
 
-### Miscellaneous
-+ Live reloading with Browsersync
-+ Image optimization with imagemin
-+ SVG icon bundling
-+ ScotchBox ready
+#### Miscellaneous
+- Live reloading with [Browsersync](https://github.com/Browsersync/browser-sync)
+- Image compression
+- SVG sprite generator
 
 ## Usage ✨
-### Coding standard
-Find it [here](https://github.com/strt/strt-docs)
+Our [coding standard](https://github.com/strt/strt-docs) is mandatory for all our projects.
 
 ### Configuration
-Find it [here](https://github.com/strt/strt-gulptasks)
+See the avaiable options [here](https://github.com/strt/strt-gulptasks)
 
 ### Build
 Development 
-``` bash
-$ gulp
+```
+$ yarn dev
 ```
 
 Production
-``` bash
-$ gulp production
+```
+$ yarn build
 ```
