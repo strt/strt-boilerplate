@@ -18,8 +18,10 @@ $colors: (
 );
 
 // Font
-$font-family: BlinkMacSystemFont, Helvetica, sans-serif;
-$font-family-alt: Georgia, serif;
+$font: (
+  family: unquote('BlinkMacSystemFont, Helvetica, sans-serif'),
+  familyAlt: unquote('Georgia, serif'),
+);
 
 // Breakpoints
 $breakpoints: (
