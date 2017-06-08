@@ -97,10 +97,10 @@
 }
 
 @mixin grid-gutter($map) {
-  @each $key, $value in $breakpoints {
-    @include breakpoint($key) {
-      padding-right: map-get($map, $key);
-      padding-left: map-get($map, $key);
+  @each $breakpoint, $value in $breakpoints {
+    @include breakpoint($breakpoint) {
+      padding-right: map-get($map, $breakpoint);
+      padding-left: map-get($map, $breakpoint);
     }
   }
 }
@@ -114,9 +114,9 @@
 }
 
 @mixin grid-collapse {
-  @each $key, $value in $breakpoints {
-    @include breakpoint($key) {
-      $offset: (map-get($grid-gutter, $key) + map-get($grid-column-gutter, $key));
+  @each $breakpoint, $value in $breakpoints {
+    @include breakpoint($breakpoint) {
+      $offset: (map-get($grid-gutter, $breakpoint) + map-get($grid-column-gutter, $breakpoint));
       margin-right: -$offset;
       margin-left: -$offset;
       width: calc(#{$grid-width} + #{$offset * 2});

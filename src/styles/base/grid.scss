@@ -40,9 +40,9 @@
       padding-left: 0;
     }
 
-    @each $key, $value in $breakpoints {
-      &.-#{$key} {
-        @include breakpoint($key) {
+    @each $breakpoint, $value in $breakpoints {
+      &.-#{$breakpoint} {
+        @include breakpoint($breakpoint) {
           @include column-generate;
         }
       }

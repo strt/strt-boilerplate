@@ -17,9 +17,9 @@ body {
   &::after {
     display: none;
 
-    @each $key, $value in $breakpoints {
-      @include breakpoint($key) {
-        content: '#{$key}';
+    @each $breakpoint, $value in $breakpoints {
+      @include breakpoint($breakpoint) {
+        content: '#{$breakpoint}';
       }
     }
   }
