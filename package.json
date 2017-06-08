@@ -27,9 +27,9 @@
     "stylelint-config-strateg": "^1.2.2"
   },
   "scripts": {
-    "test": "npm run lint:scripts && npm run lint:styles",
     "dev": "gulp",
     "build": "gulp production",
+    "test": "npm run lint:scripts && npm run lint:styles",
     "deploy": "npm run docker:build && npm run docker:push",
     "precommit": "lint-staged",
     "lint:scripts": "eslint src --ext .js --fix",
@@ -53,12 +53,8 @@
   "eslintConfig": {
     "extends": "airbnb",
     "parser": "babel-eslint",
-    "ecmaFeatures": {
-      "modules": true
-    },
     "env": {
-      "browser": true,
-      "es6": true
+      "browser": true
     }
   }
 }
