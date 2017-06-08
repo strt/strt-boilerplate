@@ -28,8 +28,8 @@
     }
   }
 
-  &__reset {
-    @include grid-reset-gutter;
+  &.-collapse {
+    @include grid-collapse;
   }
 
   &__column {
