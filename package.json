@@ -5,6 +5,22 @@
   "private": false,
   "license": "MIT",
   "author": "Strateg Marknadsföring <development@strateg.se> (http://strateg.se)",
+  "browserslist": [
+    "ie 11",
+    "last 2 versions",
+    "> 5% in SE"
+  ],
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp production",
+    "test": "npm run lint:scripts && npm run lint:styles",
+    "deploy": "npm run docker:build && npm run docker:push",
+    "lint:scripts": "eslint src --ext .js --fix",
+    "lint:styles": "stylelint \"src/**/*.scss\" --fix",
+    "docker:build": "docker build -t strt/YOUR_REGISTRY .",
+    "docker:push": "docker push strt/YOUR_REGISTRY",
+    "precommit": "lint-staged"
+  },
   "dependencies": {
     "axios": "^0.16.2",
     "core-js": "^2.4.1",
@@ -25,17 +41,6 @@
     "strt-gulptasks": "^4.4.3",
     "stylelint": "^7.10.1",
     "stylelint-config-strateg": "^1.2.2"
-  },
-  "scripts": {
-    "dev": "gulp",
-    "build": "gulp production",
-    "test": "npm run lint:scripts && npm run lint:styles",
-    "deploy": "npm run docker:build && npm run docker:push",
-    "precommit": "lint-staged",
-    "lint:scripts": "eslint src --ext .js --fix",
-    "lint:styles": "stylelint \"src/**/*.scss\" --fix",
-    "docker:build": "docker build -t strt/YOUR_REGISTRY .",
-    "docker:push": "docker push strt/YOUR_REGISTRY"
   },
   "lint-staged": {
     "*.js": [
