@@ -27,21 +27,25 @@ em {
 }
 
 .title {
+  margin-bottom: 0.4em;
+
   &.-h1 {
-    margin-bottom: 0.4em;
     font-size: 4.2rem;
   }
 
   &.-h2 {
-    margin-bottom: 0.4em;
-    font-size: 2.8rem;
+    font-size: 3.2rem;
+  }
+
+  &.-h3 {
+    font-size: 2.5rem;
   }
 }
 
 .paragraph {
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   font-size: 1.6rem;
-  line-height: 1.5em;
+  line-height: 1.6em;
 
   &.-excerpt {
     font-size: 2rem;
