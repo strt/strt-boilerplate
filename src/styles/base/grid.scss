@@ -2,6 +2,7 @@
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start;
+  align-content: flex-start;
   width: $grid-width;
   max-width: $grid-max-width;
   margin-right: auto;
@@ -10,6 +11,7 @@
   &.-center {
     align-items: center;
     justify-content: center;
+    align-content: center;
   }
 
   &.-stretch {
