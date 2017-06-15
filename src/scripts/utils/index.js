@@ -1,6 +1,5 @@
-import Cookie from './cookie';
-import viewport from './viewport';
-import events from './events';
-import easings from './easings';
+import Cookie from './Cookie';
+import Viewport from './Viewport';
+import Events from './Events';
 
-export { Cookie, viewport, events, easings };
+export { Cookie, Viewport, Events };
