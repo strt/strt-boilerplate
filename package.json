@@ -1,10 +1,21 @@
 {
-  "name": "strt-boilerplate",
-  "version": "1.1.0",
-  "description": "The Strateg front-end boilerplate.",
+  "name": "@strateg/boilerplate",
+  "version": "1.0.0",
+  "description": "The Strateg front end boilerplate.",
   "private": false,
   "license": "MIT",
   "author": "Strateg Marknadsföring <development@strateg.se> (http://strateg.se)",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp production",
+    "test": "npm run lint:scripts && npm run lint:styles",
+    "deploy": "npm run docker:build && npm run docker:push",
+    "precommit": "lint-staged",
+    "lint:scripts": "eslint src --ext .js --fix",
+    "lint:styles": "stylelint \"src/**/*.scss\" --fix",
+    "docker:build": "npm run test && docker build -t strt/YOUR_REGISTRY .",
+    "docker:push": "docker push strt/YOUR_REGISTRY"
+  },
   "dependencies": {
     "axios": "^0.16.2",
     "core-js": "^2.4.1",
@@ -25,17 +36,6 @@
     "strt-gulptasks": "^4.4.3",
     "stylelint": "^7.10.1",
     "stylelint-config-strateg": "^1.2.2"
-  },
-  "scripts": {
-    "dev": "gulp",
-    "build": "gulp production",
-    "test": "npm run lint:scripts && npm run lint:styles",
-    "deploy": "npm run docker:build && npm run docker:push",
-    "precommit": "lint-staged",
-    "lint:scripts": "eslint src --ext .js --fix",
-    "lint:styles": "stylelint \"src/**/*.scss\" --fix",
-    "docker:build": "docker build -t strt/YOUR_REGISTRY .",
-    "docker:push": "docker push strt/YOUR_REGISTRY"
   },
   "lint-staged": {
     "*.js": [
