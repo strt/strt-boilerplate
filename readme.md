@@ -30,7 +30,7 @@ $ strt-create-project <project-name>
 #### Manual
 Clone the repository
 ```
-$ git clone --depth 1 git@github.com:strt/strt-boilerplate.git <project-name> && cd <project-name> && rm -rf .git
+$ git clone --depth 1 git@github.com:strt/boilerplate.git <project-name> && cd <project-name> && rm -rf .git
 ```
 
 Install packages
