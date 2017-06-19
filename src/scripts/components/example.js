@@ -10,7 +10,7 @@ function example() {
   // Get cookie example
   console.log('🍪', Cookie.get('cookie'));
 
-  // Events subscription example
+  // Event subscription example
   Events.on('breakpoint', (bp) => {
     console.log('🖥', bp);
   });
