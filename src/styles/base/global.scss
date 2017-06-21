@@ -7,7 +7,6 @@
 html {
   box-sizing: border-box;
   overflow-x: hidden;
-  overflow-y: scroll;
 }
 
 body {
@@ -30,5 +29,13 @@ img {
   vertical-align: middle;
   max-width: 100%;
   height: auto;
-  -ms-interpolation-mode: bicubic;
+}
+
+:focus {
+  outline: dotted thin;
+}
+
+::selection {
+  color: map-get($colors, white);
+  background-color: map-get($colors, black);
 }
