@@ -1,18 +1,22 @@
 {
-  "name": "@strateg/boilerplate",
+  "name": "@strt/boilerplate",
   "version": "1.0.0",
   "description": "The Strateg front end boilerplate.",
   "private": false,
   "license": "MIT",
   "author": "Strateg Marknadsföring <development@strateg.se> (http://strateg.se)",
-  "browserslist": [
-    "ie 11",
-    "last 2 versions",
-    "> 5% in SE"
-  ],
+  "bricks": {
+    "output": "public/dist",
+    "scripts": {
+      "publicPath": "/dist/scripts"
+    },
+    "serve": {
+      "server": "public"
+    }
+  },
   "scripts": {
-    "dev": "gulp",
-    "build": "gulp production",
+    "dev": "bricks",
+    "build": "bricks build",
     "test": "npm run lint:scripts && npm run lint:styles",
     "deploy": "npm run docker:build && npm run docker:push",
     "lint:scripts": "eslint src --ext .js --fix",
@@ -29,18 +33,18 @@
     "svgxuse": "^1.2.4"
   },
   "devDependencies": {
+    "@strt/bricks": "^1.1.8",
     "babel-eslint": "^7.2.3",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
     "eslint-plugin-import": "^2.3.0",
     "eslint-plugin-jsx-a11y": "^5.0.3",
-    "eslint-plugin-react": "^7.0.1",
-    "husky": "^0.13.4",
-    "lint-staged": "^3.6.0",
-    "postcss": "^6.0.1",
-    "strt-gulptasks": "^4.4.3",
-    "stylelint": "^7.10.1",
-    "stylelint-config-strateg": "^1.2.2"
+    "eslint-plugin-react": "^7.1.0",
+    "husky": "^0.14.1",
+    "lint-staged": "^4.0.0",
+    "postcss": "^6.0.2",
+    "stylelint": "^7.11.1",
+    "stylelint-config-strateg": "^1.2.3"
   },
   "lint-staged": {
     "*.js": [
