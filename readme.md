@@ -58,7 +58,7 @@ $ yarn install
 Our [coding standard](https://github.com/strt/strt-docs) is mandatory for all our projects.
 
 ### Configuration
-See the avaiable options [here](https://github.com/strt/strt-gulptasks)
+See the avaiable options [here](https://github.com/strt/bricks)
 
 ### Build
 Development 
