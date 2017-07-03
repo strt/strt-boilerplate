@@ -1,5 +1,5 @@
 class Events {
-  events = []
+  events = [];
 
   on(name, fn) {
     this.events[name] = this.events[name] || [];

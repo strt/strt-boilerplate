@@ -1,7 +1,7 @@
 import events from './Events';
 
 class Viewport {
-  breakpoint = 'desktop'
+  breakpoint = 'desktop';
 
   constructor() {
     this.bindEvents();
@@ -13,7 +13,8 @@ class Viewport {
   }
 
   setBreakpoint() {
-    const newBreakpoint = window.getComputedStyle(document.body, ':after')
+    const newBreakpoint = window
+      .getComputedStyle(document.body, ':after')
       .getPropertyValue('content')
       .replace(/['"]+/g, '');
 
