@@ -1,6 +1,6 @@
 import { Viewport, Events, Cookie } from '../utils';
 
-function example() {
+const example = () => {
   // Get viewport example
   console.log('🖥', Viewport.breakpoint);
 
@@ -14,6 +14,6 @@ function example() {
   Events.on('breakpoint', (bp) => {
     console.log('🖥', bp);
   });
-}
+};
 
 export default example();
