@@ -33,7 +33,7 @@
     "svgxuse": "^1.2.4"
   },
   "devDependencies": {
-    "@strt/bricks": "^1.1.10",
+    "@strt/bricks": "^1.2.0",
     "babel-eslint": "^7.2.3",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
