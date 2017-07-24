@@ -27,11 +27,11 @@ class Events {
   /**
    *
    * @param {String} name
-   * @param {Any} data
+   * @param {Any} payload
    */
-  emit(name, data) {
+  emit(name, payload) {
     if (!this.events[name]) return;
-    this.events[name].forEach(fn => fn(data));
+    this.events[name].forEach(fn => fn(payload));
   }
 }
 
