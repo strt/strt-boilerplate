@@ -6,14 +6,18 @@
   <br>
 </h1>
 
-> The Strateg front-end boilerplate 
+> Lightweight and customizable front end boilerplate
 
-## Setup 🚀
-### Prerequisites
-- [Node](https://nodejs.org)
-  - Preferably install with [nvm](https://github.com/creationix/nvm)
-- [Gulp 4](https://github.com/gulpjs/gulp)
-  - `$ npm install -g gulp-cli`
+## Features ✅
+- [Babel](https://github.com/babel/babel)
+- [Eslint](https://github.com/eslint/eslint) with the [airbnb preset](https://github.com/airbnb/javascript)
+- [Browsersync](https://github.com/Browsersync/browser-sync)
+- [Autoprefixer](https://github.com/postcss/autoprefixer)
+- SVG sprite generation
+
+## Setup 🛠
+### Requirements
+- Node `>= 8` (install with [nvm](https://github.com/creationix/nvm) or get it [here](https://nodejs.org))
 
 ### Install
 #### With CLI tool
@@ -35,33 +39,19 @@ $ git clone --depth 1 git@github.com:strt/boilerplate.git <project-name> && cd <
 
 Install packages
 ```
-$ yarn install
+$ yarn
+# or
+$ npm install
 ```
 
-## Features ✅
-#### CSS/SASS
-- [Autoprefixer](https://github.com/postcss/autoprefixer)
-- Customizable BEM grid
-- Breakpoint mixin
-
-#### JavaScript
-- ES6 with [Babel](https://github.com/babel/babel)
-- [Eslint](https://github.com/eslint/eslint) with the [Airbnb preset](https://github.com/airbnb/javascript)
-- Detection of CSS breakpoints
-
-#### Miscellaneous
-- Live reloading with [Browsersync](https://github.com/Browsersync/browser-sync)
-- Image compression
-- SVG sprite generator
-
-## Usage ✨
+## Usage 🚀
 Our [coding standard](https://github.com/strt/strt-docs) is mandatory for all our projects.
 
 ### Configuration
 See the avaiable options [here](https://github.com/strt/bricks)
 
 ### Build
-Development 
+Development (**Note** this won't minify assets or extract sourcemaps)
 ```
 $ yarn dev
 ```
