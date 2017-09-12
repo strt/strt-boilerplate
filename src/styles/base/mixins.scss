@@ -59,6 +59,12 @@
   }
 }
 
+@function getBreakpoint($value, $dir) {
+  $breakpoint: if($dir == 'down', $value - 1, $value);
+
+  @return $breakpoint;
+}
+
 @mixin breakpoint($value) {
   $bp: nth($value, 1);
   $dir: if(length($value) > 1, nth($value, 2), up);
@@ -70,17 +76,17 @@
     }
   }
   @else if map-has-key($tweakpoints, $bp) {
-    @media only screen and (#{$media-query}: map-get($tweakpoints, $bp)) {
+    @media only screen and (#{$media-query}: getBreakpoint(map-get($tweakpoints, $bp), $dir)) {
       @content;
     }
   }
   @else if map-has-key($breakpoints, $bp) {
-    @media only screen and (#{$media-query}: map-get($breakpoints, $bp)) {
+    @media only screen and (#{$media-query}: getBreakpoint(map-get($breakpoints, $bp), $dir)) {
       @content;
     }
   }
   @else {
-    @warn 'Could not find #{value} in $tweakpoints or $breakpoints.';
+    @error 'Invalid argument \'#{$value}\'. Argument must be a number or match key in $tweakpoints or $breakpoints.';
   }
 }
 
