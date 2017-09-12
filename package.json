@@ -1,7 +1,7 @@
 {
   "name": "@strt/boilerplate",
   "version": "1.0.0",
-  "description": "The Strateg front end boilerplate.",
+  "description": "Lightweight and customizable front end boilerplate",
   "private": false,
   "license": "MIT",
   "author": "Strateg Marknadsföring <development@strateg.se> (http://strateg.se)",
@@ -26,20 +26,21 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
-    "js-polyfills": "^0.1.33",
+    "core-js": "^2.5.1",
+    "js-polyfills": "^0.1.34",
     "reset-css": "^2.2.1",
     "svgxuse": "^1.2.4"
   },
   "devDependencies": {
-    "@strt/bricks": "^1.5.0",
+    "@strt/bricks": "^1.7.4",
     "babel-eslint": "^7.2.3",
-    "eslint": "^4.3.0",
-    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb-base": "^12.0.0",
     "eslint-plugin-import": "^2.7.0",
     "husky": "^0.14.3",
-    "lint-staged": "^4.0.2",
-    "postcss": "^6.0.8",
-    "stylelint": "^8.0.0",
+    "lint-staged": "^4.1.3",
+    "postcss": "^6.0.11",
+    "stylelint": "^8.1.1",
     "stylelint-config-strateg": "^1.3.0"
   },
   "lint-staged": {
