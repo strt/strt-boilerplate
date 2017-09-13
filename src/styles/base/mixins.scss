@@ -1,16 +1,20 @@
-@mixin reset-button {
-  display: inline-block;
-  vertical-align: top;
+@mixin reset-element {
   outline: none;
   margin: 0;
   padding: 0;
   border: 0;
   border-radius: 0;
+  background: transparent;
+  appearance: none;
+}
+
+@mixin reset-button {
+  @include reset-element;
+  display: inline-block;
+  vertical-align: top;
   font-family: map-get($font, family);
   line-height: 1em;
   text-align: center;
-  appearance: none;
-  background: transparent;
   user-select: none;
   cursor: pointer;
 
@@ -20,13 +24,9 @@
 }
 
 @mixin reset-input {
-  padding: 0;
-  border: 0;
-  border-radius: 0;
+  @include reset-element;
   font-family: map-get($font, family);
   line-height: 1em;
-  appearance: none;
-  background: transparent;
 
   &:focus {
     outline: none;
@@ -43,19 +43,6 @@
     &::-webkit-search-results-decoration {
       display: none;
     }
-  }
-}
-
-@mixin clearfix {
-  &::before,
-  &::after {
-    content: ' ';
-    display: table;
-    flex-basis: 0;
-  }
-
-  &::after {
-    clear: both;
   }
 }
 
@@ -103,7 +90,7 @@
     width: $val;
   }
   @else {
-    @warn 'The value "#{$value}" passed to grid-column mixin is invalid.';
+    @warn 'Invalid argument \'#{$value}\'. Argument must be a number.';
   }
 }
 
@@ -141,7 +128,7 @@
   }
 }
 
-@mixin aspect-ratio($x, $y) {
+@mixin ratio($x, $y) {
   $padding: #{($y / $x) * 100 + %};
   position: relative;
   padding-top: $padding;

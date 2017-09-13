@@ -1,7 +1,10 @@
+// Config
+@import 'config';
+
+// Dependencies
 @import 'reset-css/_reset';
 
 // Base
-@import 'base/config';
 @import 'base/mixins';
 @import 'base/global';
 @import 'base/grid';
@@ -9,7 +12,9 @@
 @import 'base/animation';
 
 // Components
-@import 'components/button';
-@import 'components/input';
-@import 'components/icon';
+@import 'components/common/title';
+@import 'components/common/paragraph';
+@import 'components/common/button';
+@import 'components/common/input';
+@import 'components/common/icon';
 @import 'components/misc';

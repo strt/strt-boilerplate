@@ -2,27 +2,14 @@
   "name": "@strt/boilerplate",
   "version": "1.0.0",
   "description": "Lightweight and customizable front end boilerplate",
-  "private": false,
   "license": "MIT",
   "author": "Strateg Marknadsföring <development@strateg.se> (http://strateg.se)",
-  "bricks": {
-    "output": "public/dist",
-    "scripts": {
-      "publicPath": "/dist/scripts"
-    },
-    "serve": {
-      "server": "public"
-    }
-  },
   "scripts": {
     "dev": "bricks",
     "build": "bricks build",
     "test": "npm run lint:scripts && npm run lint:styles",
-    "deploy": "npm run docker:build && npm run docker:push",
-    "lint:scripts": "eslint src --ext .js --fix",
-    "lint:styles": "stylelint \"src/**/*.scss\" --fix",
-    "docker:build": "docker build -t strt/YOUR_REGISTRY .",
-    "docker:push": "docker push strt/YOUR_REGISTRY",
+    "lint:scripts": "eslint src --ext .js --fix; exit 0",
+    "lint:styles": "stylelint \"src/**/*.scss\" --fix; exit 0",
     "precommit": "lint-staged"
   },
   "dependencies": {
@@ -33,7 +20,7 @@
   },
   "devDependencies": {
     "@strt/bricks": "^1.7.4",
-    "babel-eslint": "^7.2.3",
+    "babel-eslint": "^8.0.0",
     "eslint": "^4.6.1",
     "eslint-config-airbnb-base": "^12.0.0",
     "eslint-plugin-import": "^2.7.0",
@@ -41,7 +28,7 @@
     "lint-staged": "^4.1.3",
     "postcss": "^6.0.11",
     "stylelint": "^8.1.1",
-    "stylelint-config-strateg": "^1.3.0"
+    "stylelint-config-strateg": "^1.3.1"
   },
   "lint-staged": {
     "*.js": [
