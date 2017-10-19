@@ -1,9 +1,7 @@
-import Cookie from './Cookie';
 import Viewport from './Viewport';
-import Events from './Events';
+import Event from './Event';
 
 export {
-  Cookie,
   Viewport,
-  Events,
+  Event,
 };
