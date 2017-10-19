@@ -9,6 +9,10 @@
   transition: border-color 140ms ease;
 
   &:focus {
-    border-color: darken(map-get($colors, gray300), 4%);
+    border-color: map-get($colors, gray400);
+  }
+
+  &::placeholder {
+    line-height: normal;
   }
 }
