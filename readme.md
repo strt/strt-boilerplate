@@ -3,10 +3,9 @@
   <a href="https://github.com/strt" target="_blank"><img src="http://www.strateg.se/images/18.a1e6bf01578783b6c19d43/1475494040088/strateg-logo.png" alt="" width="260"></a>
   <br>
   <br>
-  <br>
 </h1>
 
-> Lightweight and customizable front end boilerplate
+> Lightweight front-end boilerplate
 
 ## Features ✅
 - [Babel](https://github.com/babel/babel)
@@ -20,43 +19,33 @@
 - Node `>= 8` (install with [nvm](https://github.com/creationix/nvm) or get it [here](https://nodejs.org))
 
 ### Install
-#### With CLI tool
-Install
-```
-$ npm i -g strt-create-project
-```
-
-Usage 
-```
-$ strt-create-project <project-name>
-```
-
-#### Manual
 Clone the repository
-```
+```bash
 $ git clone --depth 1 git@github.com:strt/boilerplate.git <project-name> && cd <project-name> && rm -rf .git
 ```
 
-Install packages
-```
+Install dependencies
+```bash
 $ yarn
 # or
 $ npm install
 ```
 
+or check out [create-project](https://github.com/strt/create-project) for a simplified installation
+
 ## Usage 🚀
-Our [coding standard](https://github.com/strt/strt-docs) is mandatory for all our projects.
+Please read through our [code of conduct](https://github.com/strt/code-of-conduct) before you begin
 
 ### Configuration
-See the avaiable options [here](https://github.com/strt/bricks)
+Check out [bricks](https://github.com/strt/bricks) for available configuration
 
 ### Build
 Development (**Note** this won't minify assets or extract sourcemaps)
-```
+```bash
 $ yarn dev
 ```
 
 Production
-```
+```bash
 $ yarn build
 ```

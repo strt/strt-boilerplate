@@ -1,7 +1,7 @@
 {
   "name": "@strt/boilerplate",
   "version": "1.0.0",
-  "description": "Lightweight and customizable front end boilerplate",
+  "description": "Lightweight front-end boilerplate",
   "license": "MIT",
   "author": "Strateg Marknadsföring <development@strateg.se> (http://strateg.se)",
   "scripts": {
