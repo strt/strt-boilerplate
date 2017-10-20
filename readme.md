@@ -16,7 +16,7 @@
 
 ## Setup 🛠
 ### Requirements
-- Node `>= 8` (install with [nvm](https://github.com/creationix/nvm) or get it [here](https://nodejs.org))
+- [Node.js](https://nodejs.org) `>= 8` (install with [nvm](https://github.com/creationix/nvm))
 
 ### Install
 Clone the repository
