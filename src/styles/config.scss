@@ -11,16 +11,16 @@ $colors: (
   gray300: #e0e0e0,
   gray200: #f5f5f5,
   gray100: #fafafa,
-  red: #e74141,
-  blue: #4196e7,
-  orange: #ff5825,
-  yellow: #ffcd00,
+  red500: #e74141,
+  blue500: #4196e7,
+  orange500: #ff5825,
+  yellow500: #ffcd00,
 );
 
-// Font
-$font: (
-  family: #{BlinkMacSystemFont, Helvetica, sans-serif},
-  familyAlt: #{Georgia, serif},
+// Fonts
+$fonts: (
+  title: #{BlinkMacSystemFont, Helvetica, sans-serif},
+  body: #{Georgia, serif},
 );
 
 // Breakpoints
@@ -38,13 +38,11 @@ $grid-width: 100%;
 $grid-max-width: 1230px;
 $grid-columns: 12;
 $grid-columns-width: (100 / $grid-columns) !default;
-
 $grid-gutter: (
   desktop: 15px,
   tablet: 15px,
   mobile: 10px
 );
-
 $grid-column-gutter: (
   desktop: 15px,
   tablet: 10px,
