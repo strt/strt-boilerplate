@@ -12,7 +12,6 @@
   @include reset-element;
   display: inline-block;
   vertical-align: top;
-  font-family: map-get($font, family);
   line-height: 1em;
   text-align: center;
   user-select: none;
@@ -25,7 +24,6 @@
 
 @mixin reset-input {
   @include reset-element;
-  font-family: map-get($font, family);
   line-height: 1em;
 
   &:focus {
@@ -81,10 +79,10 @@
   @extend .grid__column;
 
   $val: nth($value, 1);
-  $columnWidth: if(length($value) > 2, 100 / nth($value, 3), $grid-columns-width);
+  $width: if(length($value) > 2, 100 / nth($value, 3), $grid-columns-width);
 
   @if unitless($val) {
-    width: #{$columnWidth * $val + %};
+    width: #{$width * $val + %};
   }
   @else if type-of($val) == 'number' and unit($val) == '%' {
     width: $val;
@@ -96,8 +94,8 @@
 
 @mixin column-offset($value: 1) {
   $val: nth($value, 1);
-  $columnWidth: if(length($value) > 2, 100 / nth($value, 3), $grid-columns-width);
-  margin-left: #{$columnWidth * $val + %};
+  $width: if(length($value) > 2, 100 / nth($value, 3), $grid-columns-width);
+  margin-left: #{$width * $val + %};
 }
 
 @mixin grid-gutter($map) {
@@ -129,9 +127,8 @@
 }
 
 @mixin ratio($x, $y) {
-  $padding: #{($y / $x) * 100 + %};
   position: relative;
-  padding-top: $padding;
+  padding-top: #{($y / $x) * 100 + %};
   width: 100%;
 
   & > * {
