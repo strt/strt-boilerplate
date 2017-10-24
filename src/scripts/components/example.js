@@ -1,17 +1,13 @@
 import { Viewport, Event } from '../utils';
 
 const example = () => {
-  // Get viewport example
+  // Get viewport
   console.log('🖥', Viewport.breakpoint);
 
-  // Event subscription example
+  // Event subscription
   Event.on('breakpoint', (bp) => {
     console.log('🖥', bp);
   });
-
-  Event.emit('breakpoint', 'woo');
-
-  console.log('after');
 };
 
 export default example();
