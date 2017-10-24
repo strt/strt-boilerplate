@@ -1,5 +1,7 @@
 .title {
   margin-bottom: 0.4em;
+  font-family: map-get($fonts, title);
+  font-weight: 700;
 
   &.-h1 {
     font-size: 4.2rem;
