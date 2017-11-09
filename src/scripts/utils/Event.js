@@ -3,7 +3,6 @@
  */
 class Event {
   topics = [];
-
   /**
    *
    * @param {String} name

@@ -1,4 +1,4 @@
-import { Event } from './';
+import Event from './Event';
 
 class Viewport {
   breakpoint = 'desktop';
