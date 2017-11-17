@@ -14,19 +14,19 @@
   },
   "dependencies": {
     "core-js": "^2.5.1",
-    "js-polyfills": "^0.1.34",
+    "js-polyfills": "^0.1.41",
     "reset-css": "^2.2.1",
-    "svgxuse": "^1.2.4"
+    "svgxuse": "^1.2.6"
   },
   "devDependencies": {
-    "@strt/bricks": "^1.9.0",
-    "babel-eslint": "^8.0.1",
-    "eslint": "^4.9.0",
+    "@strt/bricks": "^1.12.0",
+    "babel-eslint": "^8.0.2",
+    "eslint": "^4.11.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "husky": "^0.14.3",
-    "lint-staged": "^4.3.0",
-    "postcss": "^6.0.13",
+    "lint-staged": "^5.0.0",
+    "postcss": "^6.0.14",
     "stylelint": "^8.2.0",
     "stylelint-config-strateg": "^1.4.1"
   },
