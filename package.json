@@ -13,25 +13,25 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
-    "core-js": "^2.5.1",
+    "core-js": "^2.5.3",
     "js-polyfills": "^0.1.41",
     "reset-css": "^2.2.1",
     "svgxuse": "^1.2.6",
     "tiny-emitter": "^2.0.2"
   },
   "devDependencies": {
-    "@strt/bricks": "^1.12.1",
-    "babel-eslint": "^8.0.2",
-    "eslint": "^4.12.1",
+    "@strt/bricks": "^1.12.5",
+    "babel-eslint": "^8.0.3",
+    "eslint": "^4.13.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-prettier": "^2.4.0",
     "husky": "^0.14.3",
-    "lint-staged": "^5.0.0",
+    "lint-staged": "^6.0.0",
     "postcss": "^6.0.14",
-    "prettier": "^1.9.1",
-    "stylelint": "^8.3.1",
-    "stylelint-config-strateg": "^1.5.0"
+    "prettier": "^1.9.2",
+    "stylelint": "^8.4.0",
+    "stylelint-config-strateg": "^1.5.1"
   },
   "lint-staged": {
     "*.js": [
