@@ -16,7 +16,8 @@
     "core-js": "^2.5.1",
     "js-polyfills": "^0.1.41",
     "reset-css": "^2.2.1",
-    "svgxuse": "^1.2.6"
+    "svgxuse": "^1.2.6",
+    "tiny-emitter": "^2.0.2"
   },
   "devDependencies": {
     "@strt/bricks": "^1.12.1",
@@ -47,7 +48,9 @@
   },
   "eslintConfig": {
     "extends": "airbnb-base",
-    "plugins": ["prettier"],
+    "plugins": [
+      "prettier"
+    ],
     "parser": "babel-eslint",
     "env": {
       "browser": true
