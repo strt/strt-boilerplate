@@ -12,8 +12,4 @@
   &:focus {
     border-color: map-get($colors, gray400);
   }
-
-  &::placeholder {
-    line-height: normal; // Safari alignment fix
-  }
 }
