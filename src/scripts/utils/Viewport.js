@@ -1,7 +1,7 @@
 import Event from './Event';
 
 class Viewport {
-  breakpoint = 'large';
+  breakpoint = 'desktop';
 
   constructor() {
     this.bindEvents();
