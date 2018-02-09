@@ -8,6 +8,23 @@
   margin-right: auto;
   margin-left: auto;
 
+  &__column {
+    width: 100%;
+
+    @each $breakpoint, $value in $breakpoints {
+      &.-#{$breakpoint} {
+        @include breakpoint($breakpoint) {
+          @include column-generate;
+        }
+      }
+    }
+
+    &.-noPad {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
   &.-center {
     align-items: center;
     justify-content: center;
@@ -32,22 +49,5 @@
 
   &.-collapse {
     @include grid-collapse;
-  }
-
-  &__column {
-    width: 100%;
-
-    &.-noPad {
-      padding-right: 0;
-      padding-left: 0;
-    }
-
-    @each $breakpoint, $value in $breakpoints {
-      &.-#{$breakpoint} {
-        @include breakpoint($breakpoint) {
-          @include column-generate;
-        }
-      }
-    }
   }
 }
