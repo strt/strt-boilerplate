@@ -21,17 +21,17 @@
   },
   "devDependencies": {
     "@strt/bricks": "^1.13.1",
-    "babel-eslint": "^8.2.1",
-    "eslint": "^4.17.0",
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.18.1",
     "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.0",
     "husky": "^0.14.3",
-    "lint-staged": "^6.1.0",
-    "postcss": "^6.0.17",
+    "lint-staged": "^7.0.0",
+    "postcss": "^6.0.19",
     "prettier": "^1.10.2",
     "stylelint": "^8.4.0",
-    "stylelint-config-strateg": "^1.6.0"
+    "stylelint-config-strateg": "^1.7.0"
   },
   "lint-staged": {
     "*.js": [
