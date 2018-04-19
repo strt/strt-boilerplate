@@ -31,6 +31,14 @@
     align-content: center;
   }
 
+  &.-centerX {
+    justify-content: center;
+  }
+
+  &.-centerY {
+    align-items: center;
+  }
+
   &.-stretch {
     align-items: stretch;
   }
