@@ -21,11 +21,8 @@
   },
   "devDependencies": {
     "@strt/bricks": "^2.0.0",
-    "babel-eslint": "^8.2.3",
     "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.11.0",
-    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-config-strateg": "^1.0.1",
     "husky": "^0.14.3",
     "lint-staged": "^7.0.4",
     "postcss": "^6.0.21",
@@ -47,13 +44,6 @@
     "extends": "stylelint-config-strateg"
   },
   "eslintConfig": {
-    "extends": "airbnb-base",
-    "plugins": [
-      "prettier"
-    ],
-    "parser": "babel-eslint",
-    "env": {
-      "browser": true
-    }
+    "extends": "strateg"
   }
 }
