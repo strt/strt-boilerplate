@@ -9,13 +9,12 @@
     "build": "bricks build",
     "lint": "npm run lint:scripts && npm run lint:styles",
     "lint:scripts": "eslint src --ext .js --fix; exit 0",
-    "lint:styles": "stylelint \"src/**/*.scss\" --fix; exit 0",
-    "precommit": "lint-staged"
+    "lint:styles": "stylelint \"src/**/*.scss\" --fix; exit 0"
   },
   "dependencies": {
     "core-js": "^2.5.5",
     "js-polyfills": "^0.1.42",
-    "reset-css": "^3.0.0",
+    "reset-css": "^4.0.0",
     "svgxuse": "^1.2.6",
     "tiny-emitter": "^2.0.2"
   },
@@ -23,16 +22,24 @@
     "@strt/bricks": "^2.0.0",
     "eslint": "^5.4.0",
     "eslint-config-strateg": "^1.0.1",
-    "husky": "^0.14.3",
+    "husky": "^1.0.0",
     "lint-staged": "^7.0.4",
     "postcss": "^7.0.0",
     "prettier": "^1.12.1",
+    "prettier-eslint-cli": "^4.7.1",
     "stylelint": "^9.2.0",
     "stylelint-config-strateg": "^1.7.0"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "*.js": [
-      "eslint --fix",
+      "eslint",
+      "stylelint",
+      "prettier-eslint --write",
       "git add"
     ],
     "*.scss": [
