@@ -8,8 +8,32 @@
     "dev": "bricks",
     "build": "bricks build",
     "lint": "npm run lint:scripts && npm run lint:styles",
-    "lint:scripts": "eslint src --ext .js --fix; exit 0",
-    "lint:styles": "stylelint \"src/**/*.scss\" --fix; exit 0"
+    "lint:scripts": "eslint src --ext .js; exit 0",
+    "lint:styles": "stylelint \"src/**/*.scss\"; exit 0",
+    "format": "prettier-eslint --write \"src/**/*.js\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "stylelint": {
+    "extends": "stylelint-config-strateg"
+  },
+  "eslintConfig": {
+    "extends": "strateg"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "stylelint",
+      "prettier-eslint --write",
+      "git add"
+    ],
+    "*.scss": [
+      "stylelint",
+      "git add"
+    ]
   },
   "dependencies": {
     "core-js": "^2.5.5",
@@ -24,33 +48,9 @@
     "eslint-config-strateg": "^1.0.1",
     "husky": "^1.0.0",
     "lint-staged": "^7.0.4",
-    "postcss": "^7.0.0",
     "prettier": "^1.12.1",
     "prettier-eslint-cli": "^4.7.1",
     "stylelint": "^9.2.0",
     "stylelint-config-strateg": "^1.7.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint",
-      "stylelint",
-      "prettier-eslint --write",
-      "git add"
-    ],
-    "*.scss": [
-      "stylelint --fix",
-      "git add"
-    ]
-  },
-  "stylelint": {
-    "extends": "stylelint-config-strateg"
-  },
-  "eslintConfig": {
-    "extends": "strateg"
   }
 }
