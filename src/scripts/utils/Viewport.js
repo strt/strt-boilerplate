@@ -1,4 +1,4 @@
-import Event from './Event';
+import events from './events';
 
 class Viewport {
   breakpoint = 'desktop';
@@ -20,7 +20,7 @@ class Viewport {
 
     if (this.breakpoint !== newBreakpoint) {
       this.breakpoint = newBreakpoint;
-      Event.emit('breakpoint', this.breakpoint);
+      events.emit('breakpoint', this.breakpoint);
     }
   }
 }

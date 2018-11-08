@@ -1,11 +1,11 @@
-import { Viewport, Event } from '../utils';
+import { viewport, events } from '../utils';
 
 const example = () => {
   // Get viewport
-  console.log('🖥', Viewport.breakpoint);
+  console.log('🖥', viewport.breakpoint);
 
   // Event subscription
-  Event.on('breakpoint', (bp) => {
+  events.on('breakpoint', (bp) => {
     console.log('🖥', bp);
   });
 };

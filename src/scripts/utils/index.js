@@ -1,4 +1,4 @@
-import Viewport from './Viewport';
-import Event from './Event';
+import viewport from './viewport';
+import events from './events';
 
-export { Viewport, Event };
+export { viewport, events };
