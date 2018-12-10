@@ -83,7 +83,7 @@
   $width: if(length($value) > 2, 100 / nth($value, 3), $grid-columns-width);
 
   @if unitless($val) {
-    width: #{$width * $val + %};
+    width: #{$width * $val * 1%};
   } @else if type-of($val) == 'number' and unit($val) == '%' {
     width: $val;
   } @else {
@@ -94,7 +94,7 @@
 @mixin column-offset($value: 1) {
   $val: nth($value, 1);
   $width: if(length($value) > 2, 100 / nth($value, 3), $grid-columns-width);
-  margin-left: #{$width * $val + %};
+  margin-left: #{$width * $val * 1%};
 }
 
 @mixin grid-gutter($map) {
@@ -109,7 +109,7 @@
 @mixin column-generate {
   @for $i from 1 through $grid-columns {
     &-#{$i} {
-      width: #{$i * $grid-columns-width + %};
+      width: #{$i * $grid-columns-width * 1%};
     }
   }
 }
@@ -130,7 +130,7 @@
 
 @mixin ratio($x, $y) {
   position: relative;
-  padding-top: #{($y / $x) * 100 + %};
+  padding-top: #{($y / $x) * 100 * 1%};
   width: 100%;
 
   & > * {
