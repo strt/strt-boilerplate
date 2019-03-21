@@ -1,0 +1,14 @@
+// get value of an array in another array
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+
+  @return $map;
+}
+
+// access color in a mutlidimensional array
+// usage example: color(blue, 500)
+@function color($color, $tone: 1) {
+  @return map-deep-get($colors, $color, $tone);
+}
