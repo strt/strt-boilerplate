@@ -7,10 +7,12 @@
   "scripts": {
     "dev": "bricks",
     "build": "bricks build",
-    "lint": "npm run lint:scripts && npm run lint:styles",
+    "lint": "yarn lint:scripts && yarn lint:styles",
     "lint:scripts": "eslint src --ext .js; exit 0",
     "lint:styles": "stylelint \"src/**/*.scss\"; exit 0",
-    "format": "prettier-eslint --write \"src/**/*.js\""
+    "format": "yarn format:js && yarn format:other",
+    "format:js": "prettier-eslint --write \"src/**/*.js\"",
+    "format:other": "prettier --write \"**/*.{md,html,yaml,yml}\""
   },
   "husky": {
     "hooks": {
