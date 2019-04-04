@@ -43,7 +43,7 @@
     "svgxuse": "^1.2.6"
   },
   "devDependencies": {
-    "@strt/bricks": "^2.0.0",
+    "@strt/bricks": "^2.13.0",
     "eslint": "^5.4.0",
     "eslint-config-strateg": "^1.0.1",
     "husky": "^1.0.0",
