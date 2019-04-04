@@ -5,7 +5,7 @@ const example = () => {
   console.log('🖥', viewport.breakpoint);
 
   // Event subscription
-  events.on('breakpoint', (bp) => {
+  events.on('breakpoint', bp => {
     console.log('🖥', bp);
   });
 };
