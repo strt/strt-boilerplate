@@ -5,14 +5,12 @@
   "license": "MIT",
   "author": "Strateg Marknadsföring <development@strateg.se> (http://strateg.se)",
   "scripts": {
-    "dev": "bricks",
+    "dev": "bricks dev",
     "build": "bricks build",
     "lint": "yarn lint:scripts && yarn lint:styles",
     "lint:scripts": "eslint src --ext .js; exit 0",
     "lint:styles": "stylelint \"src/**/*.scss\"; exit 0",
-    "format": "yarn format:js && yarn format:other",
-    "format:js": "prettier-eslint --write \"src/**/*.js\"",
-    "format:other": "prettier --write \"**/*.{md,html,yaml,yml}\""
+    "format": "prettier --write \"**/*.{js,md,html,yaml,yml}\""
   },
   "husky": {
     "hooks": {
@@ -29,7 +27,7 @@
     "*.js": [
       "eslint",
       "stylelint",
-      "prettier-eslint --write",
+      "prettier --write",
       "git add"
     ],
     "*.scss": [
@@ -51,7 +49,6 @@
     "husky": "^1.0.0",
     "lint-staged": "^8.0.0",
     "prettier": "^1.12.1",
-    "prettier-eslint-cli": "^4.7.1",
     "stylelint": "^9.2.0",
     "stylelint-config-strateg": "^1.7.0"
   }
