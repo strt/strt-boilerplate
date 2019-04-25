@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Lightweight front-end boilerplate",
   "license": "MIT",
-  "author": "Strateg Marknadsföring <development@strateg.se> (http://strateg.se)",
+  "author": "Strateg Marknadsföring <development@strateg.se> (https://strateg.se)",
   "scripts": {
     "dev": "bricks dev",
     "build": "bricks build",
