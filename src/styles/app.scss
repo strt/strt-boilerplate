@@ -2,19 +2,17 @@
 @import 'config';
 
 // Dependencies
-@import 'reset-css/sass/reset';
+@import 'normalize.css';
 
 // Base
 @import 'base/mixins';
 @import 'base/global';
 @import 'base/grid';
-@import 'base/typography';
-@import 'base/animation';
+@import 'base/keyframes';
 
 // Components
-@import 'components/common/title';
-@import 'components/common/paragraph';
-@import 'components/common/button';
-@import 'components/common/input';
-@import 'components/common/icon';
-@import 'components/misc';
+@import 'components/title';
+@import 'components/paragraph';
+@import 'components/button';
+@import 'components/input';
+@import 'components/icon';

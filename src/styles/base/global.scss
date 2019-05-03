@@ -6,12 +6,12 @@
 
 html {
   box-sizing: border-box;
+  font-family: map-get($fonts, primary);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
-  min-width: 320px;
-  cursor: default;
-
   &::after {
     display: none;
 
@@ -28,18 +28,4 @@ img {
   vertical-align: middle;
   height: auto;
   max-width: 100%;
-}
-
-:focus {
-  outline: dotted thin;
-}
-
-:hover,
-:active {
-  outline: 0;
-}
-
-::selection {
-  color: map-get($colors, white);
-  background-color: map-get($colors, black);
 }
