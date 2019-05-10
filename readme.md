@@ -1,9 +1,4 @@
-<h1 align="center">
-  <br>
-  <a href="https://github.com/strt" target="_blank"><img src="http://www.strateg.se/images/18.a1e6bf01578783b6c19d43/1475494040088/strateg-logo.png" alt="" width="260"></a>
-  <br>
-  <br>
-</h1>
+# `strt-boilerplate`
 
 > Lightweight front-end boilerplate
 
